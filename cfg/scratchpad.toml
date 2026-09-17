@@ -1,0 +1,17 @@
+# ────────────────────────────── Scratchpads ─────────────────────────────────
+# With no entries below, Umbriel creates one implicit scratchpad named
+# `default`, and bare scratchpad actions select it. Defining any named
+# scratchpad disables that implicit default and requires a name suffix on every
+# scratchpad action. Names must be unique, and `default` is reserved.
+# Documentation: https://docs.noctalia.dev/umbriel/scratchpads/
+# ────────────────────────────────────────────────────────────────────────────
+
+[[scratchpad]]
+name = "background"
+
+[[scratchpad]]
+name = "music"
+
+# A `default_scratchpad` window rule can store new matching windows
+# automatically. Use "default" while the definitions above remain commented,
+# or an exact configured name after enabling named mode.

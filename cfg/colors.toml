@@ -1,0 +1,29 @@
+# ─────────────────────────────── Colors ─────────────────────────────────────
+# Configure every color Umbriel paints. Values stay commented so an included
+# Noctalia-generated palette can supply them without this main file winning.
+# Documentation: https://docs.noctalia.dev/umbriel/appearance/#colors
+# ────────────────────────────────────────────────────────────────────────────
+
+[colors]
+ background = "#141419FF"                      # Internal panels and banners
+ text_primary = "#E8E8EAFF"                    # Primary text
+ text_muted = "#8A8A92FF"                      # Secondary help and status text
+ accent_primary = "#7AA3FFFF"                  # Titles, key chords, and primary emphasis
+ accent_secondary = "#F5C96BFF"                # Group headings and secondary emphasis
+ warning = "#F5C96BFF"                         # Warning text and warning-only diagnostics
+ error = "#FF6B6BFF"                           # Error text, confirmations, and diagnostics
+ insert_hint = "#7FC8FF80"                     # Drag-and-drop target preview
+ backdrop = "#000000FF"                        # Fullscreen gaps and lock screen
+ shadow = "#0000007F"                          # Window shadow
+
+ [colors.border]
+ focused = "#7AA3FFFF"                         # Focused window border
+ unfocused = "#292933FF"                       # Unfocused window border
+ scratchpad_focused = "#E5C07BFF"              # Focused scratchpad border
+ scratchpad_unfocused = "#5C4A2AFF"            # Unfocused scratchpad border
+ outer = "#1A1A1FFF"                           # Outer border ring
+
+ [colors.overview]
+ background_tint = "#10101430"                 # Tint over the desktop background
+ workspace_background = "#00000044"            # Background behind each workspace
+ badge = "#7AA3FFFF"                           # Overview shortcut badge

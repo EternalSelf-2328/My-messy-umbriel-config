@@ -1,0 +1,76 @@
+# Umbriel example configuration
+
+# Distribution packages normally install this file as
+# /usr/share/umbriel/config.toml. Copy it to ~/.config/umbriel/config.toml
+# before making personal changes. Creating the user file and saving later edits
+# both apply live, so a logout is not needed.
+
+# Validate the standard config without starting or disturbing the compositor:
+#   umbriel validate
+# Use `-c` for a custom config path:
+#   umbriel validate -c /path/to/config.toml
+
+# Complete documentation: https://docs.noctalia.dev/umbriel/
+
+# ─────────────────────────────── Includes ───────────────────────────────────
+# Split large configurations into smaller files. Required files are applied in
+# list order, followed by optional files, then values in this main file.
+# Missing optional files are silently ignored and remain watched. Relative
+# paths start from the directory containing this file. Rule lists such as
+# [[window_rule]] collect entries from every file; any other value is replaced
+# by the last file that sets it.
+# Documentation: https://docs.noctalia.dev/umbriel/configuration/#include
+# ────────────────────────────────────────────────────────────────────────────
+
+[include]
+files = [
+    "./cfg/events.toml",
+    "./cfg/outputs.toml",
+    "./cfg/input.toml",
+    "./cfg/keybinds.toml",
+    "./cfg/workspaces.toml",
+    "./cfg/scratchpad.toml",
+    "./cfg/window-rules.toml",
+    "./cfg/overview.toml",
+    "./cfg/layout.toml",
+    "./cfg/appearance.toml",
+    "./cfg/animation.toml",
+    "./cfg/layer-rules.toml",
+    "./cfg/security.toml",
+    "./cfg/colors.toml",
+    "noctalia.toml",
+]                                      # Example: ["appearance.toml", "outputs.toml"]
+
+#[include.optional]
+#files = ["~/.config/umbriel/noctalia.toml"]                                      # Example: ["~/.config/umbriel/noctalia.toml"]
+
+# ─────────────────────────────── General ────────────────────────────────────
+# Configure startup commands, session behavior, environment variables, and
+# hardware events.
+# Documentation: https://docs.noctalia.dev/umbriel/configuration/#general
+# ────────────────────────────────────────────────────────────────────────────
+
+[general]
+autostart = ["noctalia", "kitty", "easyeffects"]    # Commands run once when the session starts
+mod_key = "Super"                             # Force Super instead of nested-session Alt
+xwayland = true                                 # Requires xwayland-satellite; restart to change
+show_cheatsheet = true                          # Show the keybind overlay on startup
+focus_on_activate = true                       # Do not let unsolicited requests steal focus
+honor_restored_maximize = false                 # Honor restored maximized state
+
+# Native GPU exclusions
+# Changes require a restart. Use a PCI address if the GPU may start bound to vfio-pci.
+# Device paths must resolve at startup or Umbriel refuses to start.
+# Documentation: https://docs.noctalia.dev/umbriel/configuration/#drm-devices
+# [drm]
+# ignored_devices = ["/dev/dri/by-path/pci-0000:01:00.0-card"]
+# ignored_pci_addresses = ["0000:01:00.0"]
+
+# Session environment
+# Native launcher sessions first load the user's supported login profile.
+# Values here override inherited values and are published to new systemd user
+# services. They apply only at session startup. Add or uncomment as needed.
+# Documentation: https://docs.noctalia.dev/umbriel/configuration/#environment
+[environment]
+ELECTRON_OZONE_PLATFORM_HINT = "auto"
+SDL_VIDEODRIVER = "wayland"

@@ -1,0 +1,34 @@
+# ────────────────────────────── Workspaces ──────────────────────────────────
+# Choose global workspace behavior. Each output uses dynamic workspaces unless
+# its output section defines a static count or list of names.
+# Documentation: https://docs.noctalia.dev/umbriel/workspaces/
+# ────────────────────────────────────────────────────────────────────────────
+
+[workspaces]
+# Each output supports at most 64 workspaces, including empty ones.
+back_and_forth = false                         # Re-select active workspace to switch back
+empty_above = true                             # Keep one empty workspace above active range
+
+# Workspace entries customize layout. An `index` follows the current position
+# without creating a workspace. A `name` also materializes a persistent named
+# member on matching dynamic outputs. On a static output, the rule applies only
+# when that inventory already has the selected member. Select exactly one, and
+# optionally scope by `output`.
+# Documentation: https://docs.noctalia.dev/umbriel/workspaces/#workspace-rules
+
+# [[workspace]]
+# index = 2
+# output = "DP-1"
+# layout.mode = "dwindle"
+# layout.gap = 4
+# layout.struts.top = 24
+# layout.scrolling.center_underfull_strip = false
+# layout.dwindle.preserve_split = true
+
+# Without `output`, every dynamic output gets its own case-sensitive CHAT
+# workspace. Add `output = "DP-1"` to materialize it only there. A numeric
+# string such as name = "2" remains distinct from index = 2.
+
+# [[workspace]]
+# name = "CHAT"
+# layout.mode = "master"

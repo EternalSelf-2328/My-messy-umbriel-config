@@ -1,0 +1,8 @@
+# Hardware events
+# These commands run when a laptop lid opens or closes. Uncomment either hook
+# to enable it.
+# Documentation: https://docs.noctalia.dev/umbriel/configuration/#events
+
+[events]
+ lid_close = "notify-send 'The laptop lid is closed'"
+ lid_open = "notify-send 'The laptop lid is open'"

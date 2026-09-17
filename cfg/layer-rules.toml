@@ -1,0 +1,12 @@
+# ────────────────────────────── Layer Rules ─────────────────────────────────
+# Match layer-shell surfaces such as panels, launchers, notifications, and
+# desktop widgets by namespace. Run `umbriel layers` to inspect live names.
+# Documentation: https://docs.noctalia.dev/umbriel/layer-rules/
+# ────────────────────────────────────────────────────────────────────────────
+
+[[layer_rule]]
+match.namespace = "^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd|desktop-widget-[^\"]*)$"
+blur = true
+blur_ignore_alpha = 0.5
+blur_popups = true
+blur_optimized = false

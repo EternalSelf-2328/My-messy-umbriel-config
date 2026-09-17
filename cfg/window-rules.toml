@@ -1,0 +1,121 @@
+# ───────────────────────────── Window Rules ─────────────────────────────────
+# Match windows by application ID, title, XDG tag, content type, or focus state.
+# Opening settings apply once; effects and output policies update while mapped.
+# Documentation: https://docs.noctalia.dev/umbriel/window-rules/
+# ────────────────────────────────────────────────────────────────────────────
+#[appearance]
+#corner_radius = 10
+
+# Blur every window. Keep this selectorless rule first so later matching rules
+# can override individual blur settings.
+[[window_rule]]
+blur = true
+blur_optimized = false
+
+# Noctalia settings
+[[window_rule]]
+match.app_id = "^dev.noctalia.Noctalia$"
+default_floating = true
+default_size = [1020, 900]
+
+# Noctalia share picker
+[[window_rule]]
+match.app_id = "^dev.noctalia.UmbrielSharePicker$"
+default_floating = true
+default_size = [800, 600]
+
+# Browsers expose no semantic PiP role or global position control.
+[[window_rule]]
+match.title = "^(Picture-in-Picture|Picture in picture)$"
+default_floating = true
+default_maximize = false
+default_position = { x = 20, y = 20, anchor = "bottom_right" }
+
+# Keep Steam notification toasts in the bottom-right corner without stealing
+# focus, and pin them so workspace switches do not hide them.
+[[window_rule]]
+match.title = "^notificationtoasts_.+_desktop"
+default_position = { x = 0, y = 0, anchor = "bottom_right" }
+default_focused = false
+default_pinned = true
+
+# El radio de las esquinas se define globalmente, no por ventana
+
+# Noctalia Settings
+[[window_rule]]
+match.app_id = "^dev\\.noctalia\\.Noctalia\\.Settings$"
+default_floating = true
+default_size = [1041, 920]
+
+# Editores y utilidades
+[[window_rule]]
+match.app_id = "^(code|antigravity|kate|gns3|libreoffice-writer|libreoffice-calc|Bricscad|dev\\.zed\\.Zed)$"
+default_maximize = true
+opacity = 0.95
+
+# Vesktop
+[[window_rule]]
+match.app_id = "^vesktop$"
+default_maximize = true
+opacity = 0.50
+blur = true
+
+# Grupo de opacidad 0.95 (Sobreescribirá la opacidad de vesktop a 0.95)
+[[window_rule]]
+match.app_id = "^(com\\.github\\.neithern\\.g4music|vesktop|nemo|wireshark|tauon|easyeffects|heroic|fdm|spotify|org\\.keepassxc\\.KeePassXC)$"
+opacity = 0.95
+
+# Navegadores
+[[window_rule]]
+match.app_id = "^(brave|zen)$"
+opacity = 0.98
+default_maximize = true
+blur = true
+
+# Terminales
+[[window_rule]]
+match.app_id = "^kitty$"
+opacity = 0.85
+
+# Picture in Picture (Brave y Zen)
+[[window_rule]]
+match.app_id = "^(brave|zen)$"
+match.title = "^(Pantalla en pantalla|Picture-in-Picture)$"
+default_floating = true
+
+# Zenity
+[[window_rule]]
+match.app_id = "^zenity$"
+default_floating = true
+
+# Kitty fl_term
+[[window_rule]]
+match.app_id = "^kitty$"
+match.title = "^fl_term$"
+default_floating = true
+opacity = 0.95
+default_size = [1000, 900]
+
+# Steam Notifications
+[[window_rule]]
+match.app_id = "^steam$"
+match.title = "^notificationtoasts_\\d+_desktop$"
+default_floating = true
+default_position = { x = 10, y = 10, anchor = "bottom_right" }
+default_focused = false
+default_pinned = true
+
+# Tauon Flotante
+[[window_rule]]
+match.app_id = "^tauon$"
+default_floating = true
+default_size = [853, 516]
+default_position = { x = 1034, y = 95, anchor = "top_left" }
+
+# Spotify Flotante
+[[window_rule]]
+match.app_id = "^Spotify$"
+default_floating = true
+default_size = [1005, 657]
+default_position = { x = 72, y = 76, anchor = "top_left" }
+default_workspace = 1

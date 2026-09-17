@@ -1,0 +1,35 @@
+# ─────────────────────────────── Layout ─────────────────────────────────────
+# Configure the default tiling mode and shared sizing behavior. Workspace rules
+# above can override these values for individual workspaces.
+# Documentation: https://docs.noctalia.dev/umbriel/layout/
+# ────────────────────────────────────────────────────────────────────────────
+
+[layout]
+mode = "scrolling"                              # scrolling, dwindle, or master
+gap = 8                                         # Logical pixels between tiles, 0-500
+width_presets = [0.333, 0.5, 0.667]             # Width and height cycling fractions
+
+[layout.struts]
+# Signed logical pixels reserved after panel exclusive zones. Negative values
+# expand the tiled area beyond that edge.
+left = 0                                        # -65535 to 65535
+right = 0
+top = 0
+bottom = 0
+
+[layout.scrolling]
+# The strip axis is perpendicular to the output's workspace_axis.
+default_width_fraction = 0.5                    # Initial width for new columns, 0.1-1.0
+center_underfull_strip = true                   # Center a strip narrower than the viewport
+center_focused = "never"                        # never, always, or on_overflow
+
+[layout.dwindle]
+# preserve_split = false                        # Keep every split direction fixed after creation
+new_exits_fullscreen = false                    # Exits fullscreen when a new window is opened in the workspace
+
+[layout.master]
+position = "left"                               # left, right, or center master area
+default_width_fraction = 0.55                   # Initial master area fraction, 0.1-0.9
+new_on_top = true                               # Put new windows at the top of the stack
+new_becomes_master = false                      # New windows take the master slot
+new_exits_fullscreen = false                    # Exits fullscreen when a new window is opened in the workspace
