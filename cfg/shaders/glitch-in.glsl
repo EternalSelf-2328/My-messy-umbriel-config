@@ -43,7 +43,7 @@ vec4 animation(vec2 uv) {
     vec4 shifted = umbriel_sample(uv + shift);
     color = mix(color, shifted, big_glitch * intensity * 0.4);
 
-    float scanline = 1.0 - sin(uv.y * umbriel_size.y * 3.14159) * 0.06 * intensity;
+    float scanline = 2.0 - sin(uv.y * umbriel_size.y * 3.14159) * 0.06 * intensity;
     color.rgb *= scanline;
 
     float alpha = smoothstep(0.0, 0.15, p);

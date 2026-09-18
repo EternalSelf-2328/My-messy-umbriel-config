@@ -21,13 +21,13 @@ easeOutCubic = [0.33, 1.0, 0.68, 1.0]
 
 [animation.windows_in]
 enabled = true
-duration_ms = 300
+duration_ms = 200
 curve = "easeOutCubic"
 shader = "shaders/glitch-in.glsl"
 
 [animation.windows_out]
 enabled = true
-duration_ms = 300
+duration_ms = 200
 curve = "easeOutCubic"
 shader = "shaders/glitch-out.glsl"
 
@@ -40,10 +40,16 @@ curve = "snappy"
 # shader = "shaders/squash.glsl"      # Subtle compression and settle during move/resize
 
 # Workspace switching
+#[animation.workspaces]
+#enabled = true
+#duration_ms = 250
+#curve = "easeout"
+
 [animation.workspaces]
 enabled = true
-duration_ms = 250
+duration_ms = 100
 curve = "easeout"
+shader = "shaders/glitch-workspace.glsl"
 
 # Overview opening and closing
 [animation.overview]
