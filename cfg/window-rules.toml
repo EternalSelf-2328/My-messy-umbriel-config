@@ -29,7 +29,7 @@ default_size = [800, 600]
 match.title = "^(Picture-in-Picture|Picture in picture)$"
 default_floating = true
 default_maximize = false
-default_position = { x = 20, y = 20, anchor = "bottom_right" }
+#default_position = { x = 200, y = 200, anchor = "bottom_right" }
 
 # Keep Steam notification toasts in the bottom-right corner without stealing
 # focus, and pin them so workspace switches do not hide them.
