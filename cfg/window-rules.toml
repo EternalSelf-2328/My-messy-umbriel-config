@@ -16,13 +16,14 @@ blur_optimized = false
 [[window_rule]]
 match.app_id = "^dev.noctalia.Noctalia$"
 default_floating = true
-default_size = [1020, 900]
+default_floating_size_px = {width = 1020, height = 900}
 
 # Noctalia share picker
 [[window_rule]]
 match.app_id = "^dev.noctalia.UmbrielSharePicker$"
 default_floating = true
-default_size = [800, 600]
+default_floating_size_px = { width = 800, height = 600 }
+
 
 # Browsers expose no semantic PiP role or global position control.
 [[window_rule]]
@@ -45,11 +46,11 @@ default_pinned = true
 [[window_rule]]
 match.app_id = "^dev\\.noctalia\\.Noctalia\\.Settings$"
 default_floating = true
-default_size = [1041, 920]
+default_floating_size_px = { width = 1041, height = 920 }
 
 # Editores y utilidades
 [[window_rule]]
-match.app_id = "^(code|antigravity|kate|gns3|libreoffice-writer|libreoffice-calc|Bricscad|dev\\.zed\\.Zed)$"
+match.app_id = "^(code|antigravity|md.obsidian.Obsidian|kate|gns3|libreoffice-writer|libreoffice-calc|Bricscad|dev\\.zed\\.Zed)$"
 default_maximize = true
 opacity = 0.95
 
@@ -93,8 +94,8 @@ default_floating = true
 match.app_id = "^kitty$"
 match.title = "^fl_term$"
 default_floating = true
-opacity = 0.95
-default_size = [1000, 900]
+opacity = 0.80
+default_floating_size_px = {width = 1020, height = 900}
 
 # Steam Notifications
 [[window_rule]]
@@ -107,15 +108,16 @@ default_pinned = true
 
 # Tauon Flotante
 [[window_rule]]
-match.app_id = "^tauon$"
+match.app_id = "^tauonmb$"
 default_floating = true
-default_size = [853, 516]
-default_position = { x = 1034, y = 95, anchor = "top_left" }
+default_floating_size_px = { width = 853, height = 516 }
+default_position = { x = 1034, y = 95, anchor = "top_right" }
 
 # Spotify Flotante
 [[window_rule]]
 match.app_id = "^Spotify$"
 default_floating = true
-default_size = [1005, 657]
+default_floating_size_px = { width = 1005, height = 657 }
+#default_size = [1005, 657]
 default_position = { x = 72, y = 76, anchor = "top_left" }
 default_workspace = 1

@@ -280,9 +280,9 @@
 # ─── Layout Controls ───
 "Mod+Ctrl+F" = "window-toggle-maximize"
 "Mod+P" = "window-toggle-maximize"
-"Mod+Minus" = "window-modify-width:-0.1"
-"Mod+Plus" = "window-modify-width:0.1"
-"Mod+Ctrl+P" = "window-modify-width:-0.4"
+"Mod+Minus" = "window-modify-primary-extent:-0.1"
+"Mod+Plus" = "window-modify-primary-extent:0.1"
+"Mod+Ctrl+P" = "window-modify-primary-extent:-0.4"
 
 # ─── Modes ───
 "Mod+T" = "window-toggle-floating"
