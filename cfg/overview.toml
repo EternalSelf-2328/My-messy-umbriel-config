@@ -10,8 +10,11 @@ zoom = 0.5                                      # Workspace scale in overview, 0
 scroll_factor_horizontal = 1.0                  # Overview gesture/wheel multiplier, left and right, 0.1-10.0
 scroll_factor_vertical = 1.0                    # Overview gesture/wheel multiplier, up and down, 0.1-10.0
 # Pinned windows stay hidden until overview closes; visible scratchpads are dismissed.
-# background_blur = true                        # Blur the wallpaper behind overview rows
-# workspace_wallpaper = true                    # Mirror wallpapers inside workspace previews
+# Disabled for performance: every visible workspace card was blurring the
+# desktop and re-rendering the full wallpaper at once, which is the likely
+# cause of the overview feeling choppy on this laptop's GPU.
+background_blur = false                         # Blur the wallpaper behind overview rows
+workspace_wallpaper = false                     # Mirror wallpapers inside workspace previews
 # shortcuts = true                              # Show keyboard shortcut badges on windows
 # shortcut_keys = "1234567890"                  # Badge keys in preference order
 

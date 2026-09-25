@@ -8,9 +8,12 @@
 
 # Blur every window. Keep this selectorless rule first so later matching rules
 # can override individual blur settings.
+# blur_optimized left at the global default (shared cached blur per output) -
+# forcing it false here made every window recompute its own blur pass instead
+# of reusing one, which is expensive on integrated/low-power GPUs.
 [[window_rule]]
 blur = true
-blur_optimized = false
+# blur_optimized = false
 
 # Noctalia settings
 [[window_rule]]
@@ -30,15 +33,19 @@ default_floating_size_px = { width = 800, height = 600 }
 match.title = "^(Picture-in-Picture|Picture in picture)$"
 default_floating = true
 default_maximize = false
+default_floating_size_px = { width = 406, height = 224 }
 #default_position = { x = 200, y = 200, anchor = "bottom_right" }
 
 # Keep Steam notification toasts in the bottom-right corner without stealing
 # focus, and pin them so workspace switches do not hide them.
-[[window_rule]]
-match.title = "^notificationtoasts_.+_desktop"
-default_position = { x = 0, y = 0, anchor = "bottom_right" }
-default_focused = false
-default_pinned = true
+# Superseded by the properly anchored "Steam Notifications" rule further down
+# (matches app_id + a fully anchored title, and always wins since it's later),
+# so this one was dead weight - kept here commented for reference.
+# [[window_rule]]
+# match.title = "^notificationtoasts_.+_desktop"
+# default_position = { x = 0, y = 0, anchor = "bottom_right" }
+# default_focused = false
+# default_pinned = true
 
 # El radio de las esquinas se define globalmente, no por ventana
 
@@ -50,7 +57,7 @@ default_floating_size_px = { width = 1041, height = 920 }
 
 # Editores y utilidades
 [[window_rule]]
-match.app_id = "^(code|antigravity|md.obsidian.Obsidian|kate|gns3|libreoffice-writer|libreoffice-calc|Bricscad|dev\\.zed\\.Zed)$"
+match.app_id = "^(code|antigravity|md\\.obsidian\\.Obsidian|kate|gns3|libreoffice-writer|libreoffice-calc|Bricscad|dev\\.zed\\.Zed)$"
 default_maximize = true
 opacity = 0.95
 
@@ -58,12 +65,15 @@ opacity = 0.95
 [[window_rule]]
 match.app_id = "^vesktop$"
 default_maximize = true
-opacity = 0.50
+# opacity overridden to 0.95 by the group rule below; left unset here to avoid confusion
 blur = true
 
 # Grupo de opacidad 0.95 (Sobreescribirá la opacidad de vesktop a 0.95)
+# app_id must match `umbriel windows` exactly (case-sensitive, distinct string):
+# fixed "tauon" -> "tauonmb" and "spotify" -> "Spotify" to match the dedicated
+# floating rules for those apps further down, which use the real app_id.
 [[window_rule]]
-match.app_id = "^(com\\.github\\.neithern\\.g4music|vesktop|nemo|wireshark|tauon|easyeffects|heroic|fdm|spotify|org\\.keepassxc\\.KeePassXC)$"
+match.app_id = "^(com\\.github\\.neithern\\.g4music|vesktop|nemo|wireshark|tauonmb|easyeffects|heroic|fdm|Spotify|org\\.keepassxc\\.KeePassXC)$"
 opacity = 0.95
 
 # Navegadores
@@ -79,10 +89,20 @@ match.app_id = "^kitty$"
 opacity = 0.85
 
 # Picture in Picture (Brave y Zen)
+# This rule is placed after "Navegadores" (which maximizes all brave/zen
+# windows) and after "Blur every window", so its own values win for size,
+# position, and maximize. Previously it only set default_floating, so the
+# maximize=true from "Navegadores" always won, and with no floating size or
+# position set, the compositor fell back to its default corner placement -
+# which is why the PiP window always ended up maximized/top-left instead of a
+# small floating box in the corner.
 [[window_rule]]
 match.app_id = "^(brave|zen)$"
 match.title = "^(Pantalla en pantalla|Picture-in-Picture)$"
 default_floating = true
+default_maximize = false
+default_floating_size_px = { width = 406, height = 224 }
+default_position = { x = 24, y = 24, anchor = "bottom_right" }
 
 # Zenity
 [[window_rule]]

@@ -306,6 +306,9 @@
 
 # ─── Emergency Escape Key ───
 "Mod+Escape" = "cheatsheet-toggle"
+# Recovers compositor keybinds if a game or remote-desktop client inhibits
+# them; works even while inhibited, so it never gets swallowed by that client.
+"Mod+Shift+Escape" = { action = "shortcuts-inhibit-toggle", allow_when_inhibited = true, repeat = false }
 
 # ─── Exit / Power ───
 "Ctrl+Alt+Q" = "session-quit"
@@ -319,7 +322,8 @@
 "Mod+Ctrl+D" = "spawn:noctalia msg desktop-widgets-edit"
 "Mod+A" = "spawn:noctalia msg settings-toggle"
 "Mod+Ctrl+Q" = "spawn:btop"
-"Mod+Ctrl+Alt+Escape" = "spawn:qs -c noctalia-shell ipc call systemMonitor toggle"
+# Dead: `qs` (Quickshell) is not installed on this system, so this does nothing.
+#"Mod+Ctrl+Alt+Escape" = "spawn:qs -c noctalia-shell ipc call systemMonitor toggle"
 "Mod+Alt+V" = "spawn:noctalia msg panel-toggle clipboard"
 
 # ─── Scripts y Plugins ───

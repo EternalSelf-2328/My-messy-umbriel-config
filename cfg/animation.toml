@@ -12,41 +12,41 @@
 
 [animation]
 enabled = true                                  # Master animation switch
-duration_ms = 150                               # Shared duration, 1-10000 ms
+duration_ms = 100                               # Shared duration, 1-10000 ms
 curve = "ease"                               # Built-in or registered bezier/spring curve name
 
 [animation.beziers]
 # Curva ease-out-cubic estándar (x1, y1, x2, y2)
 easeOutCubic = [0.33, 1.0, 0.68, 1.0]
 
+# Springs settle on their own physics instead of a fixed duration_ms (ignored
+# here), which is what makes Niri's default animations feel fluid. A 50ms
+# linear "ease" is so short it reads as an abrupt snap rather than motion,
+# which is part of why these felt clunky.
 [animation.windows_in]
 enabled = true
-duration_ms = 200
 #curve = "easeOutCubic"
-curve = "ease"
+curve = "spring:1,900"
 shader = "shaders/glitch-in.glsl"
 
 [animation.windows_out]
 enabled = true
-duration_ms = 300
 #curve = "easeOutCubic"
-curve = "ease"
+curve = "spring:1,1400"
 shader = "shaders/glitch-out.glsl"
 
 # Window movement, resizing, and floating maximize. Visible scratchpad keybind
 # resizing uses this event too.
 [animation.windows_move]
 enabled = true
-duration_ms = 400
 #curve = "snappy"
-curve = "ease"
+curve = "spring:1,900"
 # shader = "shaders/squash.glsl"      # Subtle compression and settle during move/resize
 
 # Workspace switching
 [animation.workspaces]
 enabled = true
-duration_ms =250
-curve = "ease"
+curve = "spring:1,800"
 
 
 #[animation.workspaces]
@@ -59,9 +59,9 @@ curve = "ease"
 
 # Overview opening and closing
 [animation.overview]
-enabled = true
+enabled = false
 duration_ms = 200
-curve = "easeout"
+curve = "linear"
 # Filmstrip movement between workspace previews: wheel, keyboard, and touchpad
 # release alike. A spring curve settles from wherever the previews are and keeps
 # the speed a swipe let go with; any other curve runs over duration_ms instead.
