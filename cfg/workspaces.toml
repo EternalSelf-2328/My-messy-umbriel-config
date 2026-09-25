@@ -6,8 +6,8 @@
 
 [workspaces]
 # Each output supports at most 64 workspaces, including empty ones.
-back_and_forth = false                         # Re-select active workspace to switch back
-empty_above = true                             # Keep one empty workspace above active range
+back_and_forth = true                         # Re-select active workspace to switch back
+empty_above = false                             # Keep one empty workspace above active range
 
 # Workspace entries customize layout. An `index` follows the current position
 # without creating a workspace. A `name` also materializes a persistent named

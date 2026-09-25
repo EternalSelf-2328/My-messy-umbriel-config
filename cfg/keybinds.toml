@@ -279,7 +279,7 @@
 "Mod+Ctrl+8" = "window-move-to-workspace:8"
 "Mod+Ctrl+9" = "window-move-to-workspace:9"
 
-"Mod+Tab" = "workspace-previous"
+"Mod+Tab" = "workspace-focus-last"
 "Alt+Tab" = "spawn:noctalia msg window-switcher"
 # "Mod+Tab" = "output-focus-next"
 # "Mod+Shift+Tab" = "window-move-to-output-next"
@@ -305,20 +305,19 @@
 # ─── Scratchpad ───
 "Mod+Shift+1" = "window-toggle-scratchpad:background"
 "Mod+Comma" = "scratchpad-toggle:background"
-"Mod+Shift+Tab" = "scratchpad-focus-next:background"
 "Mod+Alt+Comma" = "window-restore-from-scratchpad:background"
+"Mod+Alt+Ctrl+Comma" = "scratchpad-focus-next:background"
 
 "Mod+Shift+2" = "window-toggle-scratchpad:music"
 "Mod+Period" = "scratchpad-toggle:music"
 "Mod+Alt+Period" = "window-restore-from-scratchpad:music"
+"Mod+Alt+Ctrl+Period" = "scratchpad-focus-next:music"
 
-# Quake-style terminal: add the focused kitty window with Mod+Shift+3, then
-# Mod+Apostrophe (') shows/hides it from anywhere, like Guake/Tilda. Remember
-# to run Mod+Shift+3 on a kitty window at least once first - toggling an empty
-# scratchpad does nothing to show.
+
 "Mod+Shift+3" = "window-toggle-scratchpad:terminal"
 "Mod+Apostrophe" = "scratchpad-toggle:terminal"
 "Mod+Alt+Apostrophe" = "window-restore-from-scratchpad:terminal"
+"Mod+Alt+Ctrl+Apostrophe" = "scratchpad-focus-next:terminal"
 
 # ─── Screenshots ───
 "Mod+Shift+S" = "spawn:noctalia msg screenshot-region"
