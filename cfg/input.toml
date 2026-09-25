@@ -9,7 +9,7 @@ window_drag_toggle = "none"                     # Retarget a window drag: "none"
 
 [input.keyboard]
 # Physical keyboard XKB settings. Virtual keyboards provide their own keymaps.
-layout = "latam"                                     # Example: "us,de"; empty uses the system default
+layout = "es"                                     # Example: "us,de"; empty uses the system default
 variant = ""                                    # Example: ",nodeadkeys" for two layouts
 options = ""                                    # Example: "grp:alt_shift_toggle"
 repeat_rate = 25                                # Key repeats per second, 0-1000

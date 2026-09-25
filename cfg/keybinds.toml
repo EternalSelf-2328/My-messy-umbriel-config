@@ -188,6 +188,14 @@
 "Mod+Down" = "window-focus-down"
 "Mod+K" = "window-focus-down"
 
+"Mod+U" = "window-center"
+"Mod+Ctrl+T" = "window-focus-switch-floating"
+# Physical key you'd call "tilde"/backtick (top-left, next to 1). On your ISO
+# Spanish "es" layout that key emits "masculine" (º) unshifted and
+# "ordfeminine" (ª) shifted - not "grave"/"bar". Update this name again if you
+# ever change keyboard layout.
+"Mod+Masculine" = "window-focus-last"
+
 "Mod+Ctrl+Left" = "column-move-left"
 "Mod+Ctrl+J" = "column-move-left"
 
@@ -283,11 +291,16 @@
 "Mod+Minus" = "window-modify-primary-extent:-0.1"
 "Mod+Plus" = "window-modify-primary-extent:0.1"
 "Mod+Ctrl+P" = "window-modify-primary-extent:-0.4"
+"Mod+R" = "window-cycle-primary-extent"
+"Mod+Shift+R" = "window-cycle-primary-extent-back"
+"Mod+Shift+C" = "window-center"
+"Mod+BackSpace" = "window-consume-or-expel-left"
 
 # ─── Modes ───
 "Mod+T" = "window-toggle-floating"
 "Mod+F" = "window-toggle-fullscreen"
 "Mod+Y" = "workspace-set-layout:toggle"
+"Mod+Shift+T" = "window-toggle-pinned"
 
 # ─── Scratchpad ───
 "Mod+Shift+1" = "window-toggle-scratchpad:background"
@@ -299,10 +312,19 @@
 "Mod+Period" = "scratchpad-toggle:music"
 "Mod+Alt+Period" = "window-restore-from-scratchpad:music"
 
+# Quake-style terminal: add the focused kitty window with Mod+Shift+3, then
+# Mod+Apostrophe (') shows/hides it from anywhere, like Guake/Tilda. Remember
+# to run Mod+Shift+3 on a kitty window at least once first - toggling an empty
+# scratchpad does nothing to show.
+"Mod+Shift+3" = "window-toggle-scratchpad:terminal"
+"Mod+Apostrophe" = "scratchpad-toggle:terminal"
+"Mod+Alt+Apostrophe" = "window-restore-from-scratchpad:terminal"
+
 # ─── Screenshots ───
 "Mod+Shift+S" = "spawn:noctalia msg screenshot-region"
 "Mod+Shift+Z" = "spawn:noctalia msg screenshot-fullscreen"
 "Mod+Shift+X" = "spawn:noctalia msg screenshot-window"
+"Print" = "spawn:noctalia msg screenshot-region"
 
 # ─── Emergency Escape Key ───
 "Mod+Escape" = "cheatsheet-toggle"

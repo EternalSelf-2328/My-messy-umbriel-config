@@ -12,6 +12,9 @@ name = "background"
 [[scratchpad]]
 name = "music"
 
+[[scratchpad]]
+name = "terminal"
+
 # A `default_scratchpad` window rule can store new matching windows
 # automatically. Use "default" while the definitions above remain commented,
 # or an exact configured name after enabling named mode.
