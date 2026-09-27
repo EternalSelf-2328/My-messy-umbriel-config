@@ -337,10 +337,12 @@
 "Mod+Shift+Q" = "spawn:noctalia msg panel-toggle session"
 
 # ─── Control Center, Wallpaper & Misc ───
-"Mod+W" = "spawn:noctalia msg panel-toggle wallpaper"
+#"Mod+W" = "spawn:noctalia msg panel-toggle wallpaper"
+"Mod+W" = "spawn:/usr/bin/skwd-wall-v2"
 "Mod+Shift+W" = "spawn:noctalia msg panel-toggle noctalia/wallhaven:browser"
-"Mod+Ctrl+W" = "spawn:noctalia msg panel-toggle noctalia/wallpaper_depth:manager"
-"Mod+Ctrl+D" = "spawn:noctalia msg desktop-widgets-edit"
+#"Mod+Ctrl+W" = "spawn:noctalia msg panel-toggle noctalia/wallpaper_depth:manager"
+"Mod+Ctrl+W" = "spawn:noctalia msg panel-toggle sebas/undershell:panel"
+"Mod+Ctrl+D" = "spawn:/home/eternalself/.local/bin/undershell msg edit"
 "Mod+A" = "spawn:noctalia msg settings-toggle"
 "Mod+Ctrl+Q" = "spawn:btop"
 # Dead: `qs` (Quickshell) is not installed on this system, so this does nothing.

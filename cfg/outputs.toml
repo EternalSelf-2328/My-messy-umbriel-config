@@ -11,7 +11,7 @@
 # name, for example [output."Some Make Some Model ABC123"].
 
 [output.eDP-1]
-enabled = true                                # False removes the output but preserves its state
+enabled = false                                # False removes the output but preserves its state
 mode = "1366x768@60"                        # WIDTHxHEIGHT or WIDTHxHEIGHT@HZ
 position = [1920, 300]                             # Logical top-left; omit for automatic placement
 #position = [1280, 500]                             # Logical top-left; omit for automatic placement
