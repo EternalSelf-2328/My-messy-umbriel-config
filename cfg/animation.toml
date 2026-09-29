@@ -27,12 +27,21 @@ easeOutCubic = [0.33, 1.0, 0.68, 1.0]
 enabled = true
 #curve = "easeOutCubic"
 curve = "spring:1,900"
-shader = "shaders/glitch-in.glsl"
+effect = "glitch_in"
 
 [animation.windows_out]
 enabled = true
 #curve = "easeOutCubic"
 curve = "spring:1,1400"
+effect = "glitch_out"
+
+# effect names above must be registered as presets first
+[effects.preset.glitch_in]
+kind = "animation"
+shader = "shaders/glitch-in.glsl"
+
+[effects.preset.glitch_out]
+kind = "animation"
 shader = "shaders/glitch-out.glsl"
 
 # Window movement, resizing, and floating maximize. Visible scratchpad keybind

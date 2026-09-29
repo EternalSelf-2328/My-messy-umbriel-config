@@ -19,8 +19,6 @@
  [colors.border]
  focused = "#7AA3FFFF"                         # Focused window border
  unfocused = "#292933FF"                       # Unfocused window border
- scratchpad_focused = "#E5C07BFF"              # Focused scratchpad border
- scratchpad_unfocused = "#5C4A2AFF"            # Unfocused scratchpad border
  outer = "#1A1A1FFF"                           # Outer border ring
 
  [colors.overview]

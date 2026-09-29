@@ -14,7 +14,7 @@ scroll_factor_vertical = 1.0                    # Overview gesture/wheel multipl
 # desktop and re-rendering the full wallpaper at once, which is the likely
 # cause of the overview feeling choppy on this laptop's GPU.
 background_blur = false                         # Blur the wallpaper behind overview rows
-workspace_wallpaper = false                     # Mirror wallpapers inside workspace previews
+workspace_wallpaper = true                     # Mirror wallpapers inside workspace previews
 # shortcuts = true                              # Show keyboard shortcut badges on windows
 # shortcut_keys = "1234567890"                  # Badge keys in preference order
 
