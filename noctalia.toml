@@ -1,12 +1,12 @@
 [colors]
-background = "#1a1b1bFF"
+background = "#101011FF"
 text_primary = "#f3f2f2FF"
 text_muted = "#b6afafFF"
 accent_primary = "#e46767FF"
-accent_secondary = "#e7f0f9FF"
-warning = "#cc6666FF"
+accent_secondary = "#d65c5cFF"
+warning = "#fafaf1FF"
 error = "#fd4663FF"
-insert_hint = "#cc666680"
+insert_hint = "#fafaf180"
 backdrop = "#101011FF"
 
 [colors.border]
@@ -21,5 +21,5 @@ workspace_background = "#000000FF"
 
 [[window_rule]]
 match.is_scratchpad = true
-border_color_focused = "#cc6666FF"
-border_color_unfocused = "#641b1bFF"
+border_color_focused = "#fafaf1FF"
+border_color_unfocused = "#d3d366FF"
