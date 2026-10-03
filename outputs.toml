@@ -13,3 +13,6 @@ position = [0, 0]
 
 [output."Samsung Electric Company S19D300 HCKF601221"]
 position = [0, 768]
+
+[output.claudediag]
+position = [1366, 0]
