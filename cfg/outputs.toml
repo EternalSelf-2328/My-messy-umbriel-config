@@ -13,7 +13,7 @@
 [output.eDP-1]
 enabled = true                                # False removes the output but preserves its state
 mode = "1366x768@60"                        # WIDTHxHEIGHT or WIDTHxHEIGHT@HZ
-position = [1394, -200]                             # Logical top-left; omit for automatic placement
+position = [1420, -200]                             # Logical top-left; omit for automatic placement
 #position = [1280, 500]                             # Logical top-left; omit for automatic placement
 scale = 1.00                                  # Logical size is mode size divided by scale
 transform = "normal"                          # normal, 90, 180, 270, or a flipped variant

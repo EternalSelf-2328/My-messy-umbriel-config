@@ -341,7 +341,7 @@
 "Mod+W" = "spawn:/usr/bin/skwd-wall-v2"
 "Mod+Shift+W" = "spawn:noctalia msg panel-toggle noctalia/wallhaven:browser"
 #"Mod+Ctrl+W" = "spawn:noctalia msg panel-toggle noctalia/wallpaper_depth:manager"
-"Mod+Ctrl+W" = "spawn:noctalia msg panel-toggle sebas/undershell:panel"
+"Mod+Ctrl+W" = "spawn:noctalia msg panel-toggle eternalself-2328/undershell:panel"
 "Mod+Ctrl+D" = "spawn:/home/eternalself/.local/bin/undershell msg edit"
 "Mod+A" = "spawn:noctalia msg settings-toggle"
 "Mod+Ctrl+Q" = "spawn:btop"
