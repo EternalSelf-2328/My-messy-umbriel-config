@@ -9,10 +9,12 @@ position = [0, 0]
 position = [0, 0]
 
 [output."Northgate Computer Systems 0x2275 Unknown"]
-position = [0, 0]
+position = [0, 768]
 
 [output."Samsung Electric Company S19D300 HCKF601221"]
 position = [0, 768]
+transform = "normal"
+min_workspaces = 4
 
 [output.claudediag]
 position = [1366, 0]
