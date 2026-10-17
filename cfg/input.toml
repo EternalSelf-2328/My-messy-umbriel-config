@@ -84,3 +84,13 @@ follows_mouse = true                           # Focus on pointer motion and Dwi
 # sensitivity = 0.0
 # scroll_button = "MouseBack"
 # scroll_button_lock = false
+
+[input.drag_edge_scroll]
+# Al arrastrar una ventana (Mod+clic) o un drag-and-drop hasta el borde del
+# strip, el layout se desplaza solo para alcanzar columnas que no se ven.
+# Ya venía activo por defecto; aquí queda explícito y algo más reactivo.
+# Documentación: https://docs.noctalia.dev/umbriel/input/#drag-edge-scroll
+enabled = true
+trigger_zone = 40                               # Ancho de la zona en cada extremo, 1-1000 px
+delay_ms = 80                                   # Espera dentro de la zona antes de arrancar, 0-10000
+max_speed = 1500.0                              # Velocidad máxima, px lógicos por segundo

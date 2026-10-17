@@ -1,0 +1,40 @@
+# ─────────────────────────────── Efectos ────────────────────────────────────
+# Umbriel trae 10 presets GLSL en /usr/share/umbriel/effects/. Los `.toml` de
+# cada uno se cargan desde [include.optional] de config.toml, así que aquí
+# solo existen *definidos*: no se dibuja nada hasta que se selecciona uno.
+#
+# Probar en caliente, sin tocar la config (el cambio se pierde al recargar):
+#   umbriel msg effect-cursor-set:trail
+#   umbriel msg effect-border-set:pulse
+#   umbriel msg effect-window-set:scanlines
+#   umbriel msg effect-screen-set:vignette
+#   umbriel msg effect-cursor-set:off        # quitarlo
+#   umbriel effects                          # ver qué hay cargado y activo
+#
+# Si alguno convence, se descomenta abajo para dejarlo fijo.
+# Documentación: https://docs.noctalia.dev/umbriel/effects/
+# ────────────────────────────────────────────────────────────────────────────
+
+[effects]
+# Tope de fotogramas dibujados *solo* porque un efecto anima. Con 0 sigue el
+# refresco de cada salida; 60 es un seguro barato para la iGPU de este equipo,
+# por el mismo motivo por el que está apagado el blur del overview.
+max_fps = 60
+
+# in_capture = false                            # Incluir efectos en capturas de pantalla
+
+# Selectores (vacío = ninguno). Presets instalados:
+#   border: pulse, audio      window: scanlines      screen: vignette
+#   cursor: glow, trail, trail-path
+# border = "pulse"                              # Pulso en el borde de la ventana enfocada
+# border = "audio"                              # El borde late con el espectro que publica Noctalia
+# window = "scanlines"
+# screen = "vignette"
+# cursor = "trail"                              # Estela de cursor con los colores de Noctalia
+
+# Un "pool" reparte presets distintos entre ventanas y los rota con
+# effect-border-cycle. Ejemplo:
+# [effects.pool.bordes]
+# kind = "border"
+# choose = ["pulse", "audio"]
+# selection = "unused_first"                    # unused_first, round_robin o random

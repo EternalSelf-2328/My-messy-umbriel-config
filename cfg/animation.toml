@@ -113,3 +113,14 @@ curve = "easeout"
 
 [animation.springs]
 # myBounce = { damping = 0.5, stiffness = 200 }
+
+# ── Transición de workspace por shader (apagada) ──
+# `style = "reveal"` deja los dos workspaces quietos y combina dos escenas
+# completas (fondo, ventanas, decoración y superficies del shell) con un
+# shader; el contenido de las apps sigue vivo durante la transición. Es la
+# versión soportada de lo que intentaba el glitch-workspace.glsl de arriba.
+# El preset workspace_wipe ya se carga desde [include.optional] de config.toml,
+# así que basta con descomentar estas dos líneas dentro de
+# [animation.workspaces]. Cuesta GPU: probar y medir antes de dejarlo.
+# style = "reveal"
+# effect = "workspace_wipe"

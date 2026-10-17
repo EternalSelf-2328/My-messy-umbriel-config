@@ -25,3 +25,17 @@
  background_tint = "#10101430"                 # Tint over the desktop background
  workspace_background = "#00000044"            # Background behind each workspace
  badge = "#7AA3FFFF"                           # Overview shortcut badge
+
+ [colors.tab_bar]
+ # Los valores por defecto de la barra de pestañas son azules y chocarían con
+ # el tema rojo que genera Noctalia. Estos siguen la paleta actual de
+ # noctalia.toml; si cambias de tema en Noctalia habrá que repasarlos, porque
+ # el plugin todavía no escribe esta sección.
+ background = "#1A1A1FFF"                      # Pestañas inactivas
+ text = "#8A8A92FF"                            # Su título
+ active = "#e46767FF"                          # Pestaña activa en la columna enfocada
+ active_text = "#101011FF"                     # Su título
+ active_unfocused = "#641b1bFF"                # Pestaña activa en otra columna
+ active_unfocused_text = "#f3f2f2FF"
+ urgent = "#fd4663FF"                          # Pestaña oculta que pide atención
+ urgent_text = "#101011FF"

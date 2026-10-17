@@ -30,3 +30,21 @@ enabled = true                                  # Draw shadows behind non-fullsc
 softness = 10                                   # Gaussian softness, 0-200; 0 is a hard edge
 offset_x = 2                                    # Horizontal offset, -200 to 200
 offset_y = 2                                    # Vertical offset, -200 to 200
+
+[appearance.tab_bar]
+# Barra de los grupos de pestañas. Solo se dibuja cuando una columna está
+# agrupada (Mod+Shift+Tab), así que no ocupa nada mientras no uses pestañas.
+# Documentación: https://docs.noctalia.dev/umbriel/appearance/#tab-bar
+visible = true                                  # false oculta todas las barras
+style = "titles"                                # titles (con texto) o indicator (solo marcas)
+position = "top"                                # top, bottom, left o right
+height = 22                                     # 2-400 px lógicos
+font = "sans 9"
+padding = 6                                     # 0-64
+tab_gap = 2                                     # 0-64
+corner_radius = -1                              # -1 hereda appearance.corner_radius
+title_align = "center"                          # left, center o right
+title_format = "{title}"
+overflow = "scroll"                             # scroll o shrink cuando no caben
+max_tabs = 0                                    # 0 = sin límite
+hide_when_single = true                         # Sin barra si el grupo tiene una sola pestaña

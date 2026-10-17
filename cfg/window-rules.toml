@@ -141,3 +141,31 @@ default_floating_size_px = { width = 1005, height = 657 }
 #default_size = [1005, 657]
 default_position = { x = 72, y = 76, anchor = "top_left" }
 default_workspace = 1
+
+# ─────────────── Scratchpads: adopción automática de ventanas ───────────────
+# Cada `spawn_when_empty` de scratchpad.toml lanza kitty con un app_id propio
+# (`kitty --class scratch_*`). Estas reglas mandan esa ventana al scratchpad
+# que le toca, así el primer toggle lanza la app y la muestra ya dentro.
+# Ojo: como el app_id ya no es "kitty", la regla de terminales de más arriba
+# no les aplica, así que la opacidad se repite aquí para que se vean igual.
+# Documentación: https://docs.noctalia.dev/umbriel/window-rules/
+
+[[window_rule]]
+match.app_id = "^scratch_btop$"
+default_scratchpad = "background"
+opacity = 0.85
+
+[[window_rule]]
+match.app_id = "^scratch_music$"
+default_scratchpad = "music"
+opacity = 0.85
+
+[[window_rule]]
+match.app_id = "^scratch_term$"
+default_scratchpad = "terminal"
+opacity = 0.85
+
+# `background_render` (nuevo en ef51066) mantiene dibujando una ventana oculta.
+# Útil solo si algo del scratchpad debe seguir animando mientras no se ve;
+# cuesta GPU, por eso queda apagado.
+# background_render = true

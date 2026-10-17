@@ -172,21 +172,21 @@
 # ─── Window Movement and Focus ───
 "Mod+Q" = "window-close"
 
-"Mod+Left" = "window-focus-left"
-"Mod+J" = "window-focus-left"
+"Mod+Left" = "window-focus-or-output-left"
+"Mod+J" = "window-focus-or-output-left"
 "Mod+Alt+Left" = "window-focus-left"
 "Mod+Alt+J" = "window-focus-left"
 
-"Mod+Right" = "window-focus-right"
-"Mod+L" = "window-focus-right"
+"Mod+Right" = "window-focus-or-output-right"
+"Mod+L" = "window-focus-or-output-right"
 "Mod+Alt+Right" = "window-focus-right"
 "Mod+Alt+L" = "window-focus-right"
 
-"Mod+Up" = "window-focus-up"
-"Mod+I" = "window-focus-up"
+"Mod+Up" = "window-focus-or-workspace-up"
+"Mod+I" = "window-focus-or-workspace-up"
 
-"Mod+Down" = "window-focus-down"
-"Mod+K" = "window-focus-down"
+"Mod+Down" = "window-focus-or-workspace-down"
+"Mod+K" = "window-focus-or-workspace-down"
 
 "Mod+U" = "window-center"
 "Mod+Ctrl+T" = "window-focus-switch-floating"
@@ -233,8 +233,8 @@
 "Mod+Shift+End" = "column-move-to-last"
 
 # ─── Workspace & Window Switching (Rueda del ratón) ───
-"Mod+WheelDown" = "workspace-next"
-"Mod+WheelUp" = "workspace-previous"
+"Mod+WheelDown" = { action = "workspace-next", cooldown_ms = 150 }
+"Mod+WheelUp" = { action = "workspace-previous", cooldown_ms = 150 }
 "Mod+Ctrl+WheelDown" = "window-move-to-workspace-next"
 "Mod+Ctrl+WheelUp" = "window-move-to-workspace-previous"
 
@@ -287,12 +287,20 @@
 
 # ─── Layout Controls ───
 "Mod+Ctrl+F" = "window-toggle-maximize"
-"Mod+P" = "window-toggle-maximize"
+# Mod+P duplicaba exactamente a Mod+Ctrl+F. Ahora maximiza "a los bordes":
+# sin gaps, struts ni bordes, pero respetando las barras de Noctalia.
+"Mod+P" = "window-toggle-maximize-to-edges"
 "Mod+Minus" = "window-modify-primary-extent:-0.1"
 "Mod+Plus" = "window-modify-primary-extent:0.1"
 "Mod+Ctrl+P" = "window-modify-primary-extent:-0.4"
 "Mod+R" = "window-cycle-primary-extent"
 "Mod+Shift+R" = "window-cycle-primary-extent-back"
+# Extent secundario (no había ninguno): en scrolling es el alto de la fila,
+# en dwindle el corte vertical, en master la fila, y en flotante el alto.
+"Mod+Alt+Minus" = "window-modify-secondary-extent:-0.1"
+"Mod+Alt+Plus" = "window-modify-secondary-extent:0.1"
+"Mod+Alt+R" = "window-cycle-secondary-extent"
+"Mod+Shift+Alt+R" = "window-cycle-secondary-extent-back"
 "Mod+Shift+C" = "window-center"
 "Mod+BackSpace" = "window-consume-or-expel-left"
 
@@ -301,6 +309,21 @@
 "Mod+F" = "window-toggle-fullscreen"
 "Mod+Y" = "workspace-set-layout:toggle"
 "Mod+Shift+T" = "window-toggle-pinned"
+
+# ─── Grupos de pestañas (tab groups) ───
+# La tecla Tab es la del concepto, igual que Ctrl+Tab en un navegador, y no
+# chocaba con nada: Mod+Tab sigue siendo "último workspace" y Alt+Tab el
+# selector de ventanas de Noctalia.
+# Nada cambia hasta que agrupes a mano: layout.tabs.default_display = "normal".
+# Documentación: https://docs.noctalia.dev/umbriel/layout/#tab-groups
+"Mod+Shift+Tab" = "column-toggle-tabbed"          # Apila la columna como pestañas, o la deshace
+"Mod+Ctrl+Tab" = "column-focus-tab-next"
+"Mod+Ctrl+Shift+Tab" = "column-focus-tab-previous"
+# Recetas extra, por si las quieres (hay teclas libres de sobra en Mod+Ctrl+Alt):
+# "Mod+Ctrl+Alt+Tab" = "column-toggle-tab-bar"      # Oculta la barra; las pestañas ocupan su sitio
+# "Mod+Shift+Alt+Period" = "column-move-tab-next"   # Reordena la pestaña activa
+# "Mod+Shift+Alt+Comma" = "column-move-tab-previous"
+# "Mod+Ctrl+Alt+1" = "column-focus-tab:1"           # Saltar a la pestaña N
 
 # ─── Scratchpad ───
 "Mod+Shift+1" = "window-toggle-scratchpad:background"
@@ -344,7 +367,9 @@
 "Mod+Ctrl+W" = "spawn:noctalia msg panel-toggle eternalself-2328/undershell:panel"
 "Mod+Ctrl+D" = "spawn:/home/eternalself/.local/bin/undershell msg edit"
 "Mod+A" = "spawn:noctalia msg settings-toggle"
-"Mod+Ctrl+Q" = "spawn:btop"
+# `spawn:btop` no funcionaba: btop necesita un terminal. Se reutiliza la
+# regla de ventana "fl_term" (flotante 1020x900, opacidad 0.80).
+"Mod+Ctrl+Q" = "spawn:kitty --title fl_term -e btop"
 # Dead: `qs` (Quickshell) is not installed on this system, so this does nothing.
 #"Mod+Ctrl+Alt+Escape" = "spawn:qs -c noctalia-shell ipc call systemMonitor toggle"
 "Mod+Alt+V" = "spawn:noctalia msg panel-toggle clipboard"

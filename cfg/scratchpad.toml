@@ -6,14 +6,25 @@
 # Documentation: https://docs.noctalia.dev/umbriel/scratchpads/
 # ────────────────────────────────────────────────────────────────────────────
 
+# `spawn_when_empty` corre su comando cuando haces toggle de un scratchpad
+# vacío, en vez de no hacer nada. La ventana se adopta sola gracias a la regla
+# `default_scratchpad` correspondiente en window-rules.toml, siempre que
+# aparezca dentro de los 10 s siguientes al lanzamiento.
+# Se usa `kitty --class <nombre>` (no --title) porque rmpc y btop reescriben el
+# título del terminal en caliente; el app_id sí se queda fijo.
+# Documentacion: https://docs.noctalia.dev/umbriel/scratchpads/#launching-an-application-on-demand
+
 [[scratchpad]]
 name = "background"
+spawn_when_empty = "kitty --class scratch_btop -e btop"
 
 [[scratchpad]]
 name = "music"
+spawn_when_empty = "kitty --class scratch_music -e rmpc"
 
 [[scratchpad]]
 name = "terminal"
+spawn_when_empty = "kitty --class scratch_term"
 
 # A `default_scratchpad` window rule can store new matching windows
 # automatically. Use "default" while the definitions above remain commented,
