@@ -24,7 +24,7 @@ hdr = "auto"                                  # off, on, auto, or fullscreen
 sdr_white = 203                               # SDR reference white in cd/m2 during HDR
 #workspaces = 5                                # Anonymous fixed positions; omit for dynamic
 workspace_axis = "vertical"                 # vertical or horizontal workspace arrangement
-min_workspaces = 4                            # Dynamic floor; rejected with a static inventory
+#min_workspaces = 4                            # Dynamic floor; rejected with a static inventory
 cyclic_workspaces = true                      # Pasar del último workspace vuelve al primero
 
 
@@ -43,7 +43,7 @@ hdr = "auto"                                  # off, on, auto, or fullscreen
 sdr_white = 203                               # SDR reference white in cd/m2 during HDR
 #workspaces = 5                                # Anonymous fixed positions; omit for dynamic
 workspace_axis = "vertical"                 # vertical or horizontal workspace arrangement
-min_workspaces = 4                            # Dynamic floor; rejected with a static inventory
+#min_workspaces = 4                            # Dynamic floor; rejected with a static inventory
 cyclic_workspaces = true                      # Pasar del último workspace vuelve al primero
 
 # Replace the count with ["WEB", "CHAT", "MEDIA"] for named static workspaces,

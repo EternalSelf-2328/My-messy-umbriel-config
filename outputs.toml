@@ -18,3 +18,6 @@ min_workspaces = 4
 
 [output.claudediag]
 position = [1366, 0]
+
+[output.voidshot]
+position = [1366, 0]

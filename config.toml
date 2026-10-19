@@ -47,7 +47,7 @@ files = [
 # en vez de romperse. Definirlos no dibuja nada: hay que seleccionarlos en
 # cfg/effects.toml o con `umbriel msg effect-*-set:<nombre>`.
 files = [
-    "noctalia.toml",                            # Generado por Noctalia; si falta se ignora
+    # Generado por Noctalia; si falta se ignora
     "/usr/share/umbriel/effects/border/pulse/effect.toml",
     "/usr/share/umbriel/effects/border/audio/effect.toml",
     "/usr/share/umbriel/effects/window/scanlines/effect.toml",
@@ -58,7 +58,8 @@ files = [
     "/usr/share/umbriel/effects/animation/reveal/effect.toml",
     "/usr/share/umbriel/effects/animation/squash/effect.toml",
     "/usr/share/umbriel/effects/animation/workspace_wipe/effect.toml",
-    ]
+    "noctalia.toml",
+]
 
 # ─────────────────────────────── General ────────────────────────────────────
 # Configure startup commands, session behavior, environment variables, and

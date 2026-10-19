@@ -16,7 +16,7 @@
 
 [[scratchpad]]
 name = "background"
-spawn_when_empty = "kitty --class scratch_btop -e btop"
+spawn_when_empty = "kitty --class scratch_term"
 
 [[scratchpad]]
 name = "music"
@@ -24,7 +24,7 @@ spawn_when_empty = "kitty --class scratch_music -e rmpc"
 
 [[scratchpad]]
 name = "terminal"
-spawn_when_empty = "kitty --class scratch_term"
+spawn_when_empty = "kitty --class scratch_btop -e btop"
 
 # A `default_scratchpad` window rule can store new matching windows
 # automatically. Use "default" while the definitions above remain commented,

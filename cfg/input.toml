@@ -37,7 +37,7 @@ scroll_wheel_step = 60                          # Logical pixels per layout-scro
 # scroll_button_lock = false                    # One press latches scrolling instead of holding
 
 [input.tablet]
-enabled = true                                  # False disables tablet tools and pads
+enabled = false                                  # False disables tablet tools and pads
 # map_to_output = "DP-1"                        # Connector or monitor Config name
 # map_to_focused_output = false
 # map_to_focused_window = false                 # Focused-window mapping has highest priority

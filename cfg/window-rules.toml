@@ -151,7 +151,7 @@ default_workspace = 1
 # Documentación: https://docs.noctalia.dev/umbriel/window-rules/
 
 [[window_rule]]
-match.app_id = "^scratch_btop$"
+match.app_id = "^scratch_term$"
 default_scratchpad = "background"
 opacity = 0.85
 
@@ -161,7 +161,7 @@ default_scratchpad = "music"
 opacity = 0.85
 
 [[window_rule]]
-match.app_id = "^scratch_term$"
+match.app_id = "^scratch_btop$"
 default_scratchpad = "terminal"
 opacity = 0.85
 

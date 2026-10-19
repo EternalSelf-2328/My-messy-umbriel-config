@@ -143,7 +143,7 @@
 "Mod+V" = "spawn:protonvpn-app"
 "Mod+B" = "spawn:zen-browser"
 "Mod+N" = "spawn:libreoffice"
-"Mod+M" = "spawn:tauon"
+#"Mod+M" = "spawn:tauon"
 
 # ─── Media Controls V5 ───
 #"XF86AudioRaiseVolume" = "spawn:noctalia msg volume-up"
