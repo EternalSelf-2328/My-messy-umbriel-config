@@ -5,123 +5,6 @@
 # Actions: https://docs.noctalia.dev/umbriel/actions/
 # ────────────────────────────────────────────────────────────────────────────
 
-#[keybinds]
-#
-## Applications and session
-#"Mod+Return" = "spawn:kitty"
-#"Mod" = "spawn:noctalia msg panel-toggle launcher"
-#"Mod+Q" = "window-close"
-#
-## Focus navigation. In overview, Mod+Up/Down retain normal layout focus, so they
-## traverse stacks in the default horizontal layout. Bare Up/Down move between
-## workspace rows.
-#"Mod+Left" = "window-focus-left"
-#"Mod+Down" = "window-focus-down"
-#"Mod+Up" = "window-focus-up"
-#"Mod+Right" = "window-focus-right"
-#
-## Window state and layout
-#"Mod+T" = "window-toggle-floating"
-#"Mod+Shift+T" = "window-focus-switch-floating"
-#"Mod+P" = "window-toggle-pinned"
-#"Mod+M" = "window-toggle-maximize-to-edges"
-#
-## Overview
-#"Mod+O" = { action = "overview-toggle", repeat = false }
-#
-## Common keybinds
-#"Mod+Escape" = "session-quit"
-#"Mod+F1" = "window-focus-next"
-#"Mod+H" = "window-focus-left"
-#"Mod+J" = "window-focus-down"
-#"Mod+K" = "window-focus-up"
-#"Mod+L" = "window-focus-right"
-#"Mod+Shift+Left" = "column-move-left"
-#"Mod+Shift+Down" = "window-move-down"
-#"Mod+Shift+Up" = "window-move-up"
-#"Mod+Shift+Right" = "column-move-right"
-#"Mod+F" = "window-toggle-fullscreen"             # Exit restores the previous layout size immediately
-#"Mod+Ctrl+F" = "window-toggle-maximize"
-#"Mod+R" = "window-cycle-width"
-#"Mod+Shift+R" = "window-cycle-width-back"
-#"Mod+Comma" = "window-consume-left"
-#"Mod+Period" = "window-consume-right"
-#"Mod+WheelUp" = "window-focus-left"
-#"Mod+WheelDown" = "window-focus-right"
-#
-## Workspaces. Bare digits are positions on the output under the pointer.
-#"Mod+1" = "workspace-switch:1"
-#"Mod+2" = "workspace-switch:2"
-#"Mod+3" = "workspace-switch:3"
-#"Mod+4" = "workspace-switch:4"
-#"Mod+5" = "workspace-switch:5"
-#"Mod+6" = "workspace-switch:6"
-#"Mod+7" = "workspace-switch:7"
-#"Mod+8" = "workspace-switch:8"
-#"Mod+9" = "workspace-switch:9"
-#"Mod+Shift+1" = "window-move-to-workspace:1"
-#"Mod+Shift+2" = "window-move-to-workspace:2"
-#"Mod+Shift+3" = "window-move-to-workspace:3"
-#"Mod+Shift+4" = "window-move-to-workspace:4"
-#"Mod+Shift+5" = "window-move-to-workspace:5"
-#"Mod+Shift+6" = "window-move-to-workspace:6"
-#"Mod+Shift+7" = "window-move-to-workspace:7"
-#"Mod+Shift+8" = "window-move-to-workspace:8"
-#"Mod+Shift+9" = "window-move-to-workspace:9"
-# Quote an all-digit name to distinguish it from a position.
-# "Mod+Ctrl+2" = 'workspace-switch:"2"/DP-2'
-
-# Scratchpads
-# These bare actions use the implicit `default` scratchpad because no named
-# definitions are active above. A scratchpad is global: toggling it summons all
-# its windows to the output under the pointer. Only outputs with a visible
-# scratchpad receive its dim and blur backdrop.
-# Resize, maximize, fullscreen, and close actions target a scratchpad that owns
-# keyboard focus. Layout-relative window actions leave the workspace behind it
-# unchanged.
-# `window-focus:<window-id>` and `window-focus-warp:<window-id>` also summon a
-# hidden scratchpad target to the output under the pointer. The `-warp` form
-# then moves the cursor to that target.
-# Documentation: https://docs.noctalia.dev/umbriel/scratchpads/
-#"Mod+Shift+Space" = "window-move-to-scratchpad"
-#"Mod+Ctrl+Space" = "window-restore-from-scratchpad"
-
-# Optional navigation and sizing recipes. These chords do not replace active
-# bindings above when uncommented.
-# "Mod+Page_Up" = "workspace-previous"
-# "Mod+Page_Down" = "workspace-next"
-# "Mod+Shift+Page_Up" = "window-move-to-workspace-previous"
-# "Mod+Shift+Page_Down" = "window-move-to-workspace-next"
-# "Mod+Bracketright" = "window-focus-next"
-# "Mod+Bracketleft" = "window-focus-previous"
-# "Mod+Shift+Bracketright" = "window-swap-next"
-# "Mod+Shift+Bracketleft" = "window-swap-previous"
-# "Mod+Minus" = "window-modify-width:-0.1"
-# "Mod+Equal" = "window-modify-width:0.1"
-# "Mod+Alt+Minus" = "window-modify-height:-0.1"
-# "Mod+Alt+Equal" = "window-modify-height:0.1"
-# "Mod+Ctrl+H" = "window-modify-width-left:0.1"
-# "Mod+Ctrl+L" = "window-modify-width-right:0.1"
-# "Mod+Ctrl+K" = "window-modify-height-up:0.1"
-# "Mod+Ctrl+J" = "window-modify-height-down:0.1"
-# "Mod+Alt+R" = "window-cycle-height"
-# "Mod+Alt+Shift+R" = "window-cycle-height-back"
-# "Mod+Grave" = "window-focus-last"
-# "Mod+BackSpace" = "window-consume-or-expel-left"
-# "Mod+C" = "column-center"
-# "Mod+Shift+C" = "window-center"
-# "Mod+Ctrl+T" = "workspace-set-layout:toggle"
-# "Mod+MouseMiddle" = "layout-scroll-drag"
-# "Mod+Alt+K" = "keyboard-layout-next"
-# "Mod+WheelUp" = { action = "workspace-previous", cooldown_ms = 150 }
-# "Mod+WheelDown" = { action = "workspace-next", cooldown_ms = 150 }
-# "Mod+Alt+Left" = "workspace-swap-active-output-left"
-# "Mod+Alt+Right" = "workspace-swap-active-output-right"
-# "Mod+Alt+Up" = "workspace-swap-active-output-up"
-# "Mod+Alt+Down" = "workspace-swap-active-output-down"
-
-
-
 [keybinds]
 # ────────────── Keybindings ──────────────
 
@@ -190,10 +73,6 @@
 
 "Mod+U" = "window-center"
 "Mod+Ctrl+T" = "window-focus-switch-floating"
-# Physical key you'd call "tilde"/backtick (top-left, next to 1). On your ISO
-# Spanish "es" layout that key emits "masculine" (º) unshifted and
-# "ordfeminine" (ª) shifted - not "grave"/"bar". Update this name again if you
-# ever change keyboard layout.
 "Mod+Masculine" = "window-focus-last"
 
 "Mod+Ctrl+Left" = "column-move-left"
@@ -367,11 +246,7 @@
 "Mod+Ctrl+W" = "spawn:noctalia msg panel-toggle eternalself-2328/undershell:panel"
 "Mod+Ctrl+D" = "spawn:/home/eternalself/.local/bin/undershell msg edit"
 "Mod+A" = "spawn:noctalia msg settings-toggle"
-# `spawn:btop` no funcionaba: btop necesita un terminal. Se reutiliza la
-# regla de ventana "fl_term" (flotante 1020x900, opacidad 0.80).
 "Mod+Ctrl+Q" = "spawn:kitty --title fl_term -e btop"
-# Dead: `qs` (Quickshell) is not installed on this system, so this does nothing.
-#"Mod+Ctrl+Alt+Escape" = "spawn:qs -c noctalia-shell ipc call systemMonitor toggle"
 "Mod+Alt+V" = "spawn:noctalia msg panel-toggle clipboard"
 
 # ─── Scripts y Plugins ───
