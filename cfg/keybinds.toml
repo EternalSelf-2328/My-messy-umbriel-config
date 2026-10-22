@@ -165,10 +165,10 @@
 # "Mod+Alt+Tab" = "workspace-swap-active-output-next"
 
 # ─── Layout Controls ───
-"Mod+Ctrl+F" = "window-toggle-maximize"
+"Mod+Ctrl+F" = "window-toggle-maximize-to-edges"
 # Mod+P duplicaba exactamente a Mod+Ctrl+F. Ahora maximiza "a los bordes":
 # sin gaps, struts ni bordes, pero respetando las barras de Noctalia.
-"Mod+P" = "window-toggle-maximize-to-edges"
+"Mod+P" = "window-toggle-maximize"
 "Mod+Minus" = "window-modify-primary-extent:-0.1"
 "Mod+Plus" = "window-modify-primary-extent:0.1"
 "Mod+Ctrl+P" = "window-modify-primary-extent:-0.4"
