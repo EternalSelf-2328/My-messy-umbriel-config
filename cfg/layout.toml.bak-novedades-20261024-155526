@@ -1,0 +1,53 @@
+# ─────────────────────────────── Layout ─────────────────────────────────────
+# Configure the default tiling mode and shared sizing behavior. Workspace rules
+# above can override these values for individual workspaces.
+# Documentation: https://docs.noctalia.dev/umbriel/layout/
+# ────────────────────────────────────────────────────────────────────────────
+
+[layout]
+mode = "scrolling"                              # scrolling, dwindle, or master
+gap = 5                                         # Logical pixels between tiles, 0-500
+extent_presets = [0.333, 0.5, 0.667]             # Width and height cycling fractions
+new_exits_fullscreen = []                       # tiled, floating, pinned, all — empty disables
+
+[layout.struts]
+# Signed logical pixels reserved after panel exclusive zones. Negative values
+# expand the tiled area beyond that edge.
+left = 0                                        # -65535 to 65535
+right = 0
+top = 0
+bottom = 0
+
+[layout.scrolling]
+# The strip axis is perpendicular to the output's workspace_axis.
+center_underfull_strip = true                   # Center a strip narrower than the viewport
+center_focused = "never"                        # never, always, or on_overflow
+
+[layout.dwindle]
+# preserve_split = false                        # Keep every split direction fixed after creation
+
+[layout.master]
+position = "left"                               # left, right, or center master area
+default_width_fraction = 0.5                   # Initial master area fraction, 0.1-0.9
+new_on_top = true                               # Put new windows at the top of the stack
+new_becomes_master = false                      # New windows take the master slot
+
+[layout.tabs]
+# Grupos de pestañas: varias ventanas de una columna comparten el mismo hueco
+# y se cambian por una barra, en vez de repartirse el alto. En paneles de
+# 1366x768 es la diferencia entre ver una ventana o media.
+# `default_display = "normal"` deja todo como hasta ahora: solo se agrupa
+# cuando lo pides con Mod+Shift+Tab. Ponlo en "tabbed" si quieres que cada
+# columna nueva nazca ya como grupo.
+# Documentación: https://docs.noctalia.dev/umbriel/layout/#tab-groups
+default_display = "normal"                      # normal o tabbed
+new_tab_position = "after_active"               # end, o after_active junto a la pestaña activa
+wrap_focus = true                               # Dar la vuelta al final del grupo
+scroll_switches_tabs = true                     # Rueda sobre la barra cambia de pestaña
+middle_click_closes = true                      # Clic central en una pestaña la cierra
+
+# `client_maximize = "edges"` (nuevo en ef51066) hace que el botón de maximizar
+# de la propia app se comporte como window-toggle-maximize-to-edges. Con
+# prefer_no_csd = true casi ninguna ventana tiene ese botón, por eso queda
+# comentado.
+# client_maximize = "edges"

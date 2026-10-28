@@ -6,7 +6,10 @@
 position = [0, 0]
 
 [output."BOE 0x0696 Unknown"]
-position = [0, 0]
+position = [14, 0]
+
+[output.LECTIO-TEST]
+position = [1366, 0]
 
 [output."Northgate Computer Systems 0x2275 Unknown"]
 position = [0, 768]
@@ -19,5 +22,20 @@ min_workspaces = 4
 [output.claudediag]
 position = [1366, 0]
 
+[output.fxtest]
+position = [1366, 0]
+
+[output.perftest]
+position = [1366, 0]
+
+[output.skwdtest]
+position = [1366, 0]
+
+[output.uwbench]
+position = [1366, 0]
+
 [output.voidshot]
+position = [1366, 0]
+
+[output.vtest]
 position = [1366, 0]

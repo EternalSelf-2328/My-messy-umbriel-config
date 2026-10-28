@@ -10,3 +10,12 @@ blur = true
 blur_ignore_alpha = 0.5
 blur_popups = true
 blur_optimized = false
+
+# undershell-wall's picker: the desktop behind it blurred. blur_optimized
+# reuses Umbriel's already-blurred wallpaper, almost free on an HD 520;
+# blur_ignore_alpha = 0 blurs the whole transparent backdrop.
+[[layer_rule]]
+match.namespace = "^undershell-wall$"
+blur = true
+blur_ignore_alpha = 0.0
+blur_optimized = true

@@ -169,3 +169,15 @@ opacity = 0.85
 # Útil solo si algo del scratchpad debe seguir animando mientras no se ve;
 # cuesta GPU, por eso queda apagado.
 # background_render = true
+
+# ─────────────── Ventana compartida en pantalla ───────────────
+# Mientras una llamada o grabación captura una ventana concreta (compartir
+# ventana por el portal, o captura de ventana), se le pone un marco verde. El
+# marco no sale en la imagen capturada: solo lo ves tú. Compartir la pantalla
+# entera no la activa. Va al final para que gane sobre las reglas anteriores.
+# Documentación: https://docs.noctalia.dev/umbriel/window-rules/#the-window-being-shared
+[[window_rule]]
+match.is_cast_target = true
+border_width = 4
+border_color_focused = "#40C057FF"
+border_color_unfocused = "#40C057FF"

@@ -1,0 +1,259 @@
+# ─────────────────────────────── Keybinds ───────────────────────────────────
+# Bind chords to compositor actions. A configuration file replaces the built-in
+# keybind set, so define every chord that should remain available.
+# Syntax: https://docs.noctalia.dev/umbriel/keybinds/
+# Actions: https://docs.noctalia.dev/umbriel/actions/
+# ────────────────────────────────────────────────────────────────────────────
+
+[keybinds]
+# ────────────── Keybindings ──────────────
+
+# ─── Applications & Noctalia Shell ───
+"Mod+Space" = "spawn:noctalia msg panel-toggle launcher"
+"Alt+Space" = "spawn:noctalia msg panel-toggle launcher"
+"Mod+Alt+Space" = "spawn:noctalia msg panel-toggle launcher"
+
+"Mod+Return" = "spawn:kitty"
+"Mod+Shift+Return" = "spawn:kitty --title fl_term"
+"Mod+E" = "spawn:kitty -e yazi"
+"Mod+S" = "spawn:spotify-launcher"
+"Mod+D" = "spawn:vesktop"
+"Mod+G" = "spawn:fdm"
+"Mod+H" = "spawn:faugus-launcher"
+"Mod+Z" = "spawn:zeditor"
+"Mod+X" = "spawn:easyeffects"
+"Mod+C" = "spawn:keepassxc"
+"Mod+V" = "spawn:protonvpn-app"
+"Mod+B" = "spawn:zen-browser"
+"Mod+N" = "spawn:libreoffice"
+"Mod+Shift+B" = "spawn:/home/eternalself/.local/bin/lectio"   # lector de libros (lectio)
+#"Mod+M" = "spawn:tauon"
+
+# ─── Media Controls V5 ───
+#"XF86AudioRaiseVolume" = "spawn:noctalia msg volume-up"
+#"XF86AudioLowerVolume" = "spawn:noctalia msg volume-down"
+"XF86AudioRaiseVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+"
+"XF86AudioLowerVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-"
+"XF86AudioMute" = "spawn:wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+#"XF86AudioMute" = "spawn:noctalia msg volume-mute"
+"XF86AudioMicMute" = "spawn:noctalia msg mic-mute"
+#"XF86AudioNext" = "spawn:noctalia msg media next"
+#"XF86AudioPrev" = "spawn:noctalia msg media previous"
+#"XF86AudioPlay" = "spawn:noctalia msg media toggle"
+#"XF86AudioPause" = "spawn:noctalia msg media toggle"
+"XF86AudioPlay" = "spawn:playerctl play-pause"
+"XF86AudioNext" = "spawn:playerctl next"
+"XF86AudioPrev" = "spawn:playerctl previous"
+"Mod+F1" = "spawn:noctalia msg plugin blackbartblues/audio-switcher:service all cycle-output"
+"Mod+F2" = "spawn:noctalia msg plugin blackbartblues/audio-switcher:service all cycle-input"
+
+# ─── Brightness Controls ───
+"XF86MonBrightnessDown" = { action = "spawn:noctalia msg brightness-down 10", allow_when_locked = true }
+"XF86MonBrightnessUp" = { action = "spawn:noctalia msg brightness-up 10", allow_when_locked = true }
+"Mod+Ctrl+M" = "spawn:busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d +0.05"
+"Mod+Ctrl+N" = "spawn:busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d -0.05"
+
+# ─── Window Movement and Focus ───
+"Mod+Q" = "window-close"
+
+"Mod+Left" = "window-focus-or-output-left"
+"Mod+J" = "window-focus-or-output-left"
+"Mod+Alt+Left" = "window-focus-left"
+"Mod+Alt+J" = "window-focus-left"
+
+"Mod+Right" = "window-focus-or-output-right"
+"Mod+L" = "window-focus-or-output-right"
+"Mod+Alt+Right" = "window-focus-right"
+"Mod+Alt+L" = "window-focus-right"
+
+"Mod+Up" = "window-focus-or-workspace-up"
+"Mod+I" = "window-focus-or-workspace-up"
+
+"Mod+Down" = "window-focus-or-workspace-down"
+"Mod+K" = "window-focus-or-workspace-down"
+
+"Mod+U" = "window-center"
+"Mod+Ctrl+T" = "window-focus-switch-floating"
+"Mod+Masculine" = "window-focus-last"
+
+"Mod+Ctrl+Left" = "column-move-left"
+"Mod+Ctrl+J" = "column-move-left"
+
+"Mod+Ctrl+Right" = "column-move-right"
+"Mod+Ctrl+L" = "column-move-right"
+
+"Mod+Ctrl+Up" = "window-move-up"
+"Mod+Ctrl+I" = "window-move-up"
+
+"Mod+Ctrl+Down" = "window-move-down"
+"Mod+Ctrl+K" = "window-move-down"
+
+# ─── Monitor Focus & Movement ───
+"Mod+Shift+Left" = "output-focus-left"
+"Mod+Shift+J" = "output-focus-left"
+"Mod+Shift+Right" = "output-focus-right"
+"Mod+Shift+L" = "output-focus-right"
+"Mod+Shift+Up" = "output-focus-up"
+"Mod+Shift+I" = "output-focus-up"
+"Mod+Shift+Down" = "output-focus-down"
+"Mod+Shift+K" = "output-focus-down"
+
+"Mod+Shift+Ctrl+Left" = "column-move-to-output-left"
+"Mod+Shift+Ctrl+J" = "column-move-to-output-left"
+"Mod+Shift+Ctrl+Right" = "column-move-to-output-right"
+"Mod+Shift+Ctrl+L" = "column-move-to-output-right"
+"Mod+Shift+Ctrl+Up" = "column-move-to-output-up"
+"Mod+Shift+Ctrl+I" = "column-move-to-output-up"
+"Mod+Shift+Ctrl+Down" = "column-move-to-output-down"
+"Mod+Shift+Ctrl+K" = "column-move-to-output-down"
+
+"Mod+Home" = "column-focus-first"
+"Mod+End" = "column-focus-last"
+"Mod+Shift+Home" = "column-move-to-first"
+"Mod+Shift+End" = "column-move-to-last"
+
+# ─── Workspace & Window Switching (Rueda del ratón) ───
+"Mod+WheelDown" = { action = "workspace-next", cooldown_ms = 150 }
+"Mod+WheelUp" = { action = "workspace-previous", cooldown_ms = 150 }
+"Mod+Ctrl+WheelDown" = "window-move-to-workspace-next"
+"Mod+Ctrl+WheelUp" = "window-move-to-workspace-previous"
+
+"Mod+WheelRight" = "window-focus-right"
+"Mod+WheelLeft" = "window-focus-left"
+"Mod+Ctrl+WheelRight" = "column-move-right"
+"Mod+Ctrl+WheelLeft" = "column-move-left"
+
+"Mod+Shift+WheelDown" = "window-focus-right"
+"Mod+Shift+WheelUp" = "window-focus-left"
+"Mod+Ctrl+Shift+WheelDown" = "column-move-right"
+"Mod+Ctrl+Shift+WheelUp" = "column-move-left"
+
+# ─── Workspace Switching (Teclado) ───
+"Mod+1" = "workspace-switch:1"
+"Mod+2" = "workspace-switch:2"
+"Mod+3" = "workspace-switch:3"
+"Mod+4" = "workspace-switch:4"
+"Mod+5" = "workspace-switch:5"
+"Mod+6" = "workspace-switch:6"
+"Mod+7" = "workspace-switch:7"
+"Mod+8" = "workspace-switch:8"
+"Mod+9" = "workspace-switch:9"
+
+"Mod+Alt+I" = "workspace-previous"
+"Mod+Alt+Up" = "workspace-previous"
+"Mod+Alt+K" = "workspace-next"
+"Mod+Alt+Down" = "workspace-next"
+
+"Mod+Ctrl+Alt+I" = "window-move-to-workspace-previous"
+"Mod+Ctrl+Alt+Up" = "window-move-to-workspace-previous"
+"Mod+Ctrl+Alt+K" = "window-move-to-workspace-next"
+"Mod+Ctrl+Alt+Down" = "window-move-to-workspace-next"
+
+"Mod+Ctrl+1" = "window-move-to-workspace:1"
+"Mod+Ctrl+2" = "window-move-to-workspace:2"
+"Mod+Ctrl+3" = "window-move-to-workspace:3"
+"Mod+Ctrl+4" = "window-move-to-workspace:4"
+"Mod+Ctrl+5" = "window-move-to-workspace:5"
+"Mod+Ctrl+6" = "window-move-to-workspace:6"
+"Mod+Ctrl+7" = "window-move-to-workspace:7"
+"Mod+Ctrl+8" = "window-move-to-workspace:8"
+"Mod+Ctrl+9" = "window-move-to-workspace:9"
+
+"Mod+Tab" = "workspace-focus-last"
+"Alt+Tab" = "spawn:noctalia msg window-switcher"
+# "Mod+Tab" = "output-focus-next"
+# "Mod+Shift+Tab" = "window-move-to-output-next"
+# "Mod+Alt+Tab" = "workspace-swap-active-output-next"
+
+# ─── Layout Controls ───
+"Mod+Ctrl+F" = "window-toggle-maximize-to-edges"
+# Mod+P duplicaba exactamente a Mod+Ctrl+F. Ahora maximiza "a los bordes":
+# sin gaps, struts ni bordes, pero respetando las barras de Noctalia.
+"Mod+P" = "window-toggle-maximize"
+"Mod+Minus" = "window-modify-primary-extent:-0.1"
+"Mod+Plus" = "window-modify-primary-extent:0.1"
+"Mod+Ctrl+P" = "window-modify-primary-extent:-0.4"
+"Mod+R" = "window-cycle-primary-extent"
+"Mod+Shift+R" = "window-cycle-primary-extent-back"
+# Extent secundario (no había ninguno): en scrolling es el alto de la fila,
+# en dwindle el corte vertical, en master la fila, y en flotante el alto.
+"Mod+Alt+Minus" = "window-modify-secondary-extent:-0.1"
+"Mod+Alt+Plus" = "window-modify-secondary-extent:0.1"
+"Mod+Alt+R" = "window-cycle-secondary-extent"
+"Mod+Shift+Alt+R" = "window-cycle-secondary-extent-back"
+"Mod+Shift+C" = "window-center"
+"Mod+BackSpace" = "window-consume-or-expel-left"
+
+# ─── Modes ───
+"Mod+T" = "window-toggle-floating"
+"Mod+F" = "window-toggle-fullscreen"
+"Mod+Y" = "workspace-set-layout:toggle"
+"Mod+Shift+T" = "window-toggle-pinned"
+
+# ─── Grupos de pestañas (tab groups) ───
+# La tecla Tab es la del concepto, igual que Ctrl+Tab en un navegador, y no
+# chocaba con nada: Mod+Tab sigue siendo "último workspace" y Alt+Tab el
+# selector de ventanas de Noctalia.
+# Nada cambia hasta que agrupes a mano: layout.tabs.default_display = "normal".
+# Documentación: https://docs.noctalia.dev/umbriel/layout/#tab-groups
+"Mod+Shift+Tab" = "column-toggle-tabbed"          # Apila la columna como pestañas, o la deshace
+"Mod+Ctrl+Tab" = "column-focus-tab-next"
+"Mod+Ctrl+Shift+Tab" = "column-focus-tab-previous"
+# Recetas extra, por si las quieres (hay teclas libres de sobra en Mod+Ctrl+Alt):
+# "Mod+Ctrl+Alt+Tab" = "column-toggle-tab-bar"      # Oculta la barra; las pestañas ocupan su sitio
+# "Mod+Shift+Alt+Period" = "column-move-tab-next"   # Reordena la pestaña activa
+# "Mod+Shift+Alt+Comma" = "column-move-tab-previous"
+# "Mod+Ctrl+Alt+1" = "column-focus-tab:1"           # Saltar a la pestaña N
+
+# ─── Scratchpad ───
+"Mod+Shift+1" = "window-toggle-scratchpad:background"
+"Mod+Comma" = "scratchpad-toggle:background"
+"Mod+Alt+Comma" = "window-restore-from-scratchpad:background"
+"Mod+Alt+Ctrl+Comma" = "scratchpad-focus-next:background"
+
+"Mod+Shift+2" = "window-toggle-scratchpad:music"
+"Mod+Period" = "scratchpad-toggle:music"
+"Mod+Alt+Period" = "window-restore-from-scratchpad:music"
+"Mod+Alt+Ctrl+Period" = "scratchpad-focus-next:music"
+
+
+"Mod+Shift+3" = "window-toggle-scratchpad:terminal"
+"Mod+Apostrophe" = "scratchpad-toggle:terminal"
+"Mod+Alt+Apostrophe" = "window-restore-from-scratchpad:terminal"
+"Mod+Alt+Ctrl+Apostrophe" = "scratchpad-focus-next:terminal"
+
+# ─── Screenshots ───
+"Mod+Shift+S" = "spawn:noctalia msg screenshot-region"
+"Mod+Shift+Z" = "spawn:noctalia msg screenshot-fullscreen"
+"Mod+Shift+X" = "spawn:noctalia msg screenshot-window"
+"Print" = "spawn:noctalia msg screenshot-region"
+
+# ─── Emergency Escape Key ───
+"Mod+Escape" = "cheatsheet-toggle"
+# Recovers compositor keybinds if a game or remote-desktop client inhibits
+# them; works even while inhibited, so it never gets swallowed by that client.
+"Mod+Shift+Escape" = { action = "shortcuts-inhibit-toggle", allow_when_inhibited = true, repeat = false }
+
+# ─── Exit / Power ───
+"Ctrl+Alt+Q" = "session-quit"
+"Mod+O" = "overview-toggle"
+"Mod+Shift+Q" = "spawn:noctalia msg panel-toggle session"
+
+# ─── Control Center, Wallpaper & Misc ───
+#"Mod+W" = "spawn:noctalia msg panel-toggle wallpaper"
+"Mod+W" = "spawn:/usr/bin/skwd-wall-v2"
+"Mod+Shift+W" = "spawn:noctalia msg panel-toggle noctalia/wallhaven:browser"
+#"Mod+Ctrl+W" = "spawn:noctalia msg panel-toggle noctalia/wallpaper_depth:manager"
+"Mod+Ctrl+W" = "spawn:noctalia msg panel-toggle eternalself-2328/undershell:panel"
+"Mod+Ctrl+D" = "spawn:/home/eternalself/.local/bin/undershell msg edit"
+"Mod+A" = "spawn:noctalia msg settings-toggle"
+"Mod+Ctrl+Q" = "spawn:kitty --title fl_term -e btop"
+"Mod+Alt+V" = "spawn:noctalia msg panel-toggle clipboard"
+
+# ─── Scripts y Plugins ───
+"Shift+Alt+T" = "spawn:~/.local/bin/niri-ocr.sh"
+"Mod+Alt+S" = "spawn:noctalia msg panel-toggle nightwatch75/file-search:panel"
+"Mod+Ctrl+C" = "spawn:noctalia msg panel-toggle yuuto/calculator:panel"
+"Mod+Shift+A" = "spawn:noctalia msg plugin alexander/screen-toolkit:service all colorPicker"
+#"Mod+Alt+C" = "spawn:noctalia msg panel-toggle jrohland/claudecode:popout"
+"Mod+Alt+C" = "spawn:noctalia msg panel-toggle lfdominguez/claude-sessions:panel"

@@ -6,7 +6,7 @@
 
 [layout]
 mode = "scrolling"                              # scrolling, dwindle, or master
-gap = 8                                         # Logical pixels between tiles, 0-500
+gap = 5                                         # Logical pixels between tiles, 0-500
 extent_presets = [0.333, 0.5, 0.667]             # Width and height cycling fractions
 new_exits_fullscreen = []                       # tiled, floating, pinned, all — empty disables
 
@@ -22,6 +22,9 @@ bottom = 0
 # The strip axis is perpendicular to the output's workspace_axis.
 center_underfull_strip = true                   # Center a strip narrower than the viewport
 center_focused = "never"                        # never, always, or on_overflow
+# Al elegir una ventana en el overview (Mod+O), centra su columna en vez de
+# dejarla pegada a un borde (nuevo en 2ecfe10d).
+center_on_overview_select = true
 
 [layout.dwindle]
 # preserve_split = false                        # Keep every split direction fixed after creation

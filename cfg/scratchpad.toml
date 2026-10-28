@@ -20,7 +20,7 @@ spawn_when_empty = "kitty --class scratch_term"
 
 [[scratchpad]]
 name = "music"
-spawn_when_empty = "kitty --class scratch_music -e rmpc"
+spawn_when_empty = "kitty --class scratch_music -e /home/eternalself/.local/bin/rmpc"
 
 [[scratchpad]]
 name = "terminal"

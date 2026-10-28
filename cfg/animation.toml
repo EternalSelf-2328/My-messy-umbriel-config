@@ -52,6 +52,14 @@ enabled = true
 curve = "spring:1,900"
 # shader = "shaders/squash.glsl"      # Subtle compression and settle during move/resize
 
+# Cambio de tamaño, separado del movimiento desde 924b4a0e. Por defecto hereda
+# la curva de windows_move; queda explícito con la misma curva para poder
+# ajustarlo aparte. Si las dos curvas difieren, una ventana puede solaparse un
+# instante con sus vecinas durante un reflow.
+[animation.windows_resize]
+enabled = true
+curve = "spring:1,900"
+
 #Workspace switching
 [animation.workspaces]
 enabled = true
@@ -85,9 +93,6 @@ duration_ms = 250
 curve = "snappy"
 dim = 0.5                                       # Backdrop dim amount, 0.0-1.0
 blur = true                                    # Requires appearance.blur.enabled
-scale = 0.0                                     # 0 keeps geometry; 0.1-1.0 centers and scales
-maximize = false                                # Maximize to usable-area edges while shown
-fullscreen = false                              # Make the scratchpad window fullscreen while shown
 
 # Focus border color
 [animation.border]

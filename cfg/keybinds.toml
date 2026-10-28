@@ -26,6 +26,7 @@
 "Mod+V" = "spawn:protonvpn-app"
 "Mod+B" = "spawn:zen-browser"
 "Mod+N" = "spawn:libreoffice"
+"Mod+Shift+B" = "spawn:/home/eternalself/.local/bin/lectio"   # lector de libros (lectio)
 #"Mod+M" = "spawn:tauon"
 
 # ─── Media Controls V5 ───
@@ -54,6 +55,9 @@
 
 # ─── Window Movement and Focus ───
 "Mod+Q" = "window-close"
+# window-close le pide a la app que cierre; una app colgada no contesta.
+# window-kill mata el proceso. Combinación difícil de pulsar sin querer.
+"Mod+Ctrl+Shift+Q" = { action = "window-kill", repeat = false }
 
 "Mod+Left" = "window-focus-or-output-left"
 "Mod+J" = "window-focus-or-output-left"
@@ -186,7 +190,13 @@
 # ─── Modes ───
 "Mod+T" = "window-toggle-floating"
 "Mod+F" = "window-toggle-fullscreen"
-"Mod+Y" = "workspace-set-layout:toggle"
+"Mod+Y" = "workspace-set-layout:toggle"         # Recorre scrolling, dwindle, master y floating
+"Mod+Shift+Y" = "workspace-set-layout:toggle:scrolling,floating"   # Directo entre scrolling y floating
+
+# ─── Minimizar (solo ventanas flotantes, nuevo en e5adea60) ───
+"Mod+M" = "window-minimize"
+"Mod+Shift+M" = "window-restore-minimized"      # La última minimizada de este workspace
+"Mod+Shift+D" = "workspace-toggle-show-desktop" # Minimiza o restaura todas las flotantes
 "Mod+Shift+T" = "window-toggle-pinned"
 
 # ─── Grupos de pestañas (tab groups) ───
@@ -240,7 +250,7 @@
 
 # ─── Control Center, Wallpaper & Misc ───
 #"Mod+W" = "spawn:noctalia msg panel-toggle wallpaper"
-"Mod+W" = "spawn:/usr/bin/skwd-wall-v2"
+"Mod+W" = "spawn:/home/eternalself/.local/bin/undershell-wall"
 "Mod+Shift+W" = "spawn:noctalia msg panel-toggle noctalia/wallhaven:browser"
 #"Mod+Ctrl+W" = "spawn:noctalia msg panel-toggle noctalia/wallpaper_depth:manager"
 "Mod+Ctrl+W" = "spawn:noctalia msg panel-toggle eternalself-2328/undershell:panel"

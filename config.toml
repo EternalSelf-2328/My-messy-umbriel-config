@@ -68,7 +68,7 @@ files = [
 # ────────────────────────────────────────────────────────────────────────────
 
 [general]
-autostart = ["noctalia", "kitty", "easyeffects", "sh -c 'sleep 3 && skwd-helm apply \"$(jq -r .path ~/.cache/skwd-wall-v2/last-wallpaper.json)\"'"]    # Commands run once when the session starts; skwd-helm re-apply is a safety net for the skwd-walld login race (gray background)
+autostart = ["noctalia", "kitty", "easyeffects", "/home/eternalself/.local/bin/undershell-wall --stashed", "sh -c 'sleep 3 && ~/.local/bin/undershell-wallctl apply \"$(jq -r .path ~/.cache/undershell-wall/last-wallpaper.json)\"'"]    # Commands run once when the session starts; the picker starts hidden (instant Mod+W); undershell-wallctl re-apply is a safety net for the wallpaper daemon login race (gray background)
 mod_key = "Super"                             # Force Super instead of nested-session Alt
 xwayland = true                                 # Requires xwayland-satellite; restart to change
 show_cheatsheet = true                          # Show the keybind overlay on startup
