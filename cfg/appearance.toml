@@ -6,9 +6,9 @@
 
 [appearance]
 prefer_no_csd = true                            # Prefer Umbriel's border-only decoration
-border_width = 2                                # Inner border width, 0-100 logical pixels
+border_width = 3                                # Inner border width, 0-100 logical pixels
 outer_border_width = 0                          # Optional outer ring, 0-100 logical pixels
-corner_radius = 10                              # Radius of the final decorated edge, 0-100
+corner_radius = 0                              # Radius of the final decorated edge, 0-100
 drag_opacity = 0.75                             # Window opacity during a tiled or floating drag
 
 [appearance.blur]

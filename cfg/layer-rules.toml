@@ -11,11 +11,13 @@ blur_ignore_alpha = 0.5
 blur_popups = true
 blur_optimized = false
 
-# undershell-wall's picker: the desktop behind it blurred. blur_optimized
-# reuses Umbriel's already-blurred wallpaper, almost free on an HD 520;
-# blur_ignore_alpha = 0 blurs the whole transparent backdrop.
+# undershell-wall's picker: the desktop behind it blurred; blur_ignore_alpha
+# = 0 blurs the whole transparent backdrop. blur_optimized = false
+# (2026-11-05): the optimized one reused the blurred wallpaper alone, so
+# undershell's filter vanished while the picker was open. Now a full-screen
+# blur of what is really there, every frame it changes, while the picker is up.
 [[layer_rule]]
 match.namespace = "^undershell-wall$"
 blur = true
 blur_ignore_alpha = 0.0
-blur_optimized = true
+blur_optimized = false

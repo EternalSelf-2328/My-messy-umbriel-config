@@ -4,16 +4,18 @@
 # Documentation: https://docs.noctalia.dev/umbriel/window-rules/
 # ────────────────────────────────────────────────────────────────────────────
 #[appearance]
-#corner_radius = 10
+#corner_radius = 0
 
 # Blur every window. Keep this selectorless rule first so later matching rules
 # can override individual blur settings.
-# blur_optimized left at the global default (shared cached blur per output) -
-# forcing it false here made every window recompute its own blur pass instead
-# of reusing one, which is expensive on integrated/low-power GPUs.
+# blur_optimized = false (2026-11-05): the optimized blur reuses a cached blur
+# of the wallpaper layer only, so a transparent window hid undershell's widgets
+# and filter (layer "bottom"). Not optimized, each window blurs what is really
+# behind it, at the cost of its own blur pass (expensive on an HD 520).
+# To go back: comment the line out (backup: window-rules.toml.bak-blur-*).
 [[window_rule]]
 blur = true
-# blur_optimized = false
+blur_optimized = false
 
 # Noctalia settings
 [[window_rule]]

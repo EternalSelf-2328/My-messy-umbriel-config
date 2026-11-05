@@ -3,8 +3,8 @@
 # Opening settings apply once; effects and output policies update while mapped.
 # Documentation: https://docs.noctalia.dev/umbriel/window-rules/
 # ────────────────────────────────────────────────────────────────────────────
-#[appearance]
-#corner_radius = 10
+[appearance]
+corner_radius = 10
 
 # Blur every window. Keep this selectorless rule first so later matching rules
 # can override individual blur settings.

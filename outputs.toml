@@ -6,7 +6,7 @@
 position = [0, 0]
 
 [output."BOE 0x0696 Unknown"]
-position = [14, 0]
+position = [0, 0]
 
 [output.LECTIO-TEST]
 position = [1366, 0]
@@ -15,9 +15,18 @@ position = [1366, 0]
 position = [0, 768]
 
 [output."Samsung Electric Company S19D300 HCKF601221"]
-position = [0, 768]
+position = [669, 768]
 transform = "normal"
 min_workspaces = 4
+
+[output.US-MEDIA]
+position = [1366, 0]
+
+[output.US-PIXELS]
+position = [1366, 0]
+
+[output.US-PT]
+position = [1366, 0]
 
 [output.claudediag]
 position = [1366, 0]
@@ -26,6 +35,9 @@ position = [1366, 0]
 position = [1366, 0]
 
 [output.perftest]
+position = [1366, 0]
+
+[output.prueba-t02]
 position = [1366, 0]
 
 [output.skwdtest]

@@ -9,49 +9,49 @@
 # ────────────── Keybindings ──────────────
 
 # ─── Applications & Noctalia Shell ───
-"Mod+Space" = "spawn:noctalia msg panel-toggle launcher"
-"Alt+Space" = "spawn:noctalia msg panel-toggle launcher"
-"Mod+Alt+Space" = "spawn:noctalia msg panel-toggle launcher"
+"Mod+Space" = "spawn noctalia msg panel-toggle launcher"
+"Alt+Space" = "spawn noctalia msg panel-toggle launcher"
+"Mod+Alt+Space" = "spawn noctalia msg panel-toggle launcher"
 
-"Mod+Return" = "spawn:kitty"
-"Mod+Shift+Return" = "spawn:kitty --title fl_term"
-"Mod+E" = "spawn:kitty -e yazi"
-"Mod+S" = "spawn:spotify-launcher"
-"Mod+D" = "spawn:vesktop"
-"Mod+G" = "spawn:fdm"
-"Mod+H" = "spawn:faugus-launcher"
-"Mod+Z" = "spawn:zeditor"
-"Mod+X" = "spawn:easyeffects"
-"Mod+C" = "spawn:keepassxc"
-"Mod+V" = "spawn:protonvpn-app"
-"Mod+B" = "spawn:zen-browser"
-"Mod+N" = "spawn:libreoffice"
-"Mod+Shift+B" = "spawn:/home/eternalself/.local/bin/lectio"   # lector de libros (lectio)
+"Mod+Return" = "spawn kitty"
+"Mod+Shift+Return" = "spawn kitty --title fl_term"
+"Mod+E" = "spawn kitty -e yazi"
+"Mod+S" = "spawn spotify-launcher"
+"Mod+D" = "spawn vesktop"
+"Mod+G" = "spawn fdm"
+"Mod+H" = "spawn faugus-launcher"
+"Mod+Z" = "spawn zeditor"
+"Mod+X" = "spawn easyeffects"
+"Mod+C" = "spawn keepassxc"
+"Mod+V" = "spawn protonvpn-app"
+"Mod+B" = "spawn zen-browser"
+"Mod+N" = "spawn libreoffice"
+"Mod+Shift+B" = "spawn /home/eternalself/.local/bin/lectio"   # lector de libros (lectio)
 #"Mod+M" = "spawn:tauon"
 
 # ─── Media Controls V5 ───
 #"XF86AudioRaiseVolume" = "spawn:noctalia msg volume-up"
 #"XF86AudioLowerVolume" = "spawn:noctalia msg volume-down"
-"XF86AudioRaiseVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+"
-"XF86AudioLowerVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-"
-"XF86AudioMute" = "spawn:wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+"XF86AudioRaiseVolume" = "spawn wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+"
+"XF86AudioLowerVolume" = "spawn wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-"
+"XF86AudioMute" = "spawn wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 #"XF86AudioMute" = "spawn:noctalia msg volume-mute"
-"XF86AudioMicMute" = "spawn:noctalia msg mic-mute"
+"XF86AudioMicMute" = "spawn noctalia msg mic-mute"
 #"XF86AudioNext" = "spawn:noctalia msg media next"
 #"XF86AudioPrev" = "spawn:noctalia msg media previous"
 #"XF86AudioPlay" = "spawn:noctalia msg media toggle"
 #"XF86AudioPause" = "spawn:noctalia msg media toggle"
-"XF86AudioPlay" = "spawn:playerctl play-pause"
-"XF86AudioNext" = "spawn:playerctl next"
-"XF86AudioPrev" = "spawn:playerctl previous"
-"Mod+F1" = "spawn:noctalia msg plugin blackbartblues/audio-switcher:service all cycle-output"
-"Mod+F2" = "spawn:noctalia msg plugin blackbartblues/audio-switcher:service all cycle-input"
+"XF86AudioPlay" = "spawn playerctl play-pause"
+"XF86AudioNext" = "spawn playerctl next"
+"XF86AudioPrev" = "spawn playerctl previous"
+"Mod+F1" = "spawn noctalia msg plugin eternalself-2328/audio-switcher:service all cycle-output"
+"Mod+F2" = "spawn noctalia msg plugin eternalself-2328/audio-switcher:service all cycle-input"
 
 # ─── Brightness Controls ───
-"XF86MonBrightnessDown" = { action = "spawn:noctalia msg brightness-down 10", allow_when_locked = true }
-"XF86MonBrightnessUp" = { action = "spawn:noctalia msg brightness-up 10", allow_when_locked = true }
-"Mod+Ctrl+M" = "spawn:busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d +0.05"
-"Mod+Ctrl+N" = "spawn:busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d -0.05"
+"XF86MonBrightnessDown" = { action = "spawn noctalia msg brightness-down 10", allow_when_locked = true }
+"XF86MonBrightnessUp" = { action = "spawn noctalia msg brightness-up 10", allow_when_locked = true }
+"Mod+Ctrl+M" = "spawn busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d +0.05"
+"Mod+Ctrl+N" = "spawn busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d -0.05"
 
 # ─── Window Movement and Focus ───
 "Mod+Q" = "window-close"
@@ -132,15 +132,15 @@
 "Mod+Ctrl+Shift+WheelUp" = "column-move-left"
 
 # ─── Workspace Switching (Teclado) ───
-"Mod+1" = "workspace-switch:1"
-"Mod+2" = "workspace-switch:2"
-"Mod+3" = "workspace-switch:3"
-"Mod+4" = "workspace-switch:4"
-"Mod+5" = "workspace-switch:5"
-"Mod+6" = "workspace-switch:6"
-"Mod+7" = "workspace-switch:7"
-"Mod+8" = "workspace-switch:8"
-"Mod+9" = "workspace-switch:9"
+"Mod+1" = "workspace-switch 1"
+"Mod+2" = "workspace-switch 2"
+"Mod+3" = "workspace-switch 3"
+"Mod+4" = "workspace-switch 4"
+"Mod+5" = "workspace-switch 5"
+"Mod+6" = "workspace-switch 6"
+"Mod+7" = "workspace-switch 7"
+"Mod+8" = "workspace-switch 8"
+"Mod+9" = "workspace-switch 9"
 
 "Mod+Alt+I" = "workspace-previous"
 "Mod+Alt+Up" = "workspace-previous"
@@ -152,18 +152,18 @@
 "Mod+Ctrl+Alt+K" = "window-move-to-workspace-next"
 "Mod+Ctrl+Alt+Down" = "window-move-to-workspace-next"
 
-"Mod+Ctrl+1" = "window-move-to-workspace:1"
-"Mod+Ctrl+2" = "window-move-to-workspace:2"
-"Mod+Ctrl+3" = "window-move-to-workspace:3"
-"Mod+Ctrl+4" = "window-move-to-workspace:4"
-"Mod+Ctrl+5" = "window-move-to-workspace:5"
-"Mod+Ctrl+6" = "window-move-to-workspace:6"
-"Mod+Ctrl+7" = "window-move-to-workspace:7"
-"Mod+Ctrl+8" = "window-move-to-workspace:8"
-"Mod+Ctrl+9" = "window-move-to-workspace:9"
+"Mod+Ctrl+1" = "window-move-to-workspace 1"
+"Mod+Ctrl+2" = "window-move-to-workspace 2"
+"Mod+Ctrl+3" = "window-move-to-workspace 3"
+"Mod+Ctrl+4" = "window-move-to-workspace 4"
+"Mod+Ctrl+5" = "window-move-to-workspace 5"
+"Mod+Ctrl+6" = "window-move-to-workspace 6"
+"Mod+Ctrl+7" = "window-move-to-workspace 7"
+"Mod+Ctrl+8" = "window-move-to-workspace 8"
+"Mod+Ctrl+9" = "window-move-to-workspace 9"
 
 "Mod+Tab" = "workspace-focus-last"
-"Alt+Tab" = "spawn:noctalia msg window-switcher"
+"Alt+Tab" = "spawn noctalia msg window-switcher"
 # "Mod+Tab" = "output-focus-next"
 # "Mod+Shift+Tab" = "window-move-to-output-next"
 # "Mod+Alt+Tab" = "workspace-swap-active-output-next"
@@ -173,15 +173,15 @@
 # Mod+P duplicaba exactamente a Mod+Ctrl+F. Ahora maximiza "a los bordes":
 # sin gaps, struts ni bordes, pero respetando las barras de Noctalia.
 "Mod+P" = "window-toggle-maximize"
-"Mod+Minus" = "window-modify-primary-extent:-0.1"
-"Mod+Plus" = "window-modify-primary-extent:0.1"
-"Mod+Ctrl+P" = "window-modify-primary-extent:-0.4"
+"Mod+Minus" = "window-modify-primary-extent -0.1"
+"Mod+Plus" = "window-modify-primary-extent 0.1"
+"Mod+Ctrl+P" = "window-modify-primary-extent -0.4"
 "Mod+R" = "window-cycle-primary-extent"
 "Mod+Shift+R" = "window-cycle-primary-extent-back"
 # Extent secundario (no había ninguno): en scrolling es el alto de la fila,
 # en dwindle el corte vertical, en master la fila, y en flotante el alto.
-"Mod+Alt+Minus" = "window-modify-secondary-extent:-0.1"
-"Mod+Alt+Plus" = "window-modify-secondary-extent:0.1"
+"Mod+Alt+Minus" = "window-modify-secondary-extent -0.1"
+"Mod+Alt+Plus" = "window-modify-secondary-extent 0.1"
 "Mod+Alt+R" = "window-cycle-secondary-extent"
 "Mod+Shift+Alt+R" = "window-cycle-secondary-extent-back"
 "Mod+Shift+C" = "window-center"
@@ -190,8 +190,8 @@
 # ─── Modes ───
 "Mod+T" = "window-toggle-floating"
 "Mod+F" = "window-toggle-fullscreen"
-"Mod+Y" = "workspace-set-layout:toggle"         # Recorre scrolling, dwindle, master y floating
-"Mod+Shift+Y" = "workspace-set-layout:toggle:scrolling,floating"   # Directo entre scrolling y floating
+"Mod+Y" = "workspace-set-layout toggle"         # Recorre scrolling, dwindle, master y floating
+"Mod+Shift+Y" = "workspace-set-layout toggle scrolling stacking"   # Directo entre scrolling y floating
 
 # ─── Minimizar (solo ventanas flotantes, nuevo en e5adea60) ───
 "Mod+M" = "window-minimize"
@@ -215,27 +215,27 @@
 # "Mod+Ctrl+Alt+1" = "column-focus-tab:1"           # Saltar a la pestaña N
 
 # ─── Scratchpad ───
-"Mod+Shift+1" = "window-toggle-scratchpad:background"
-"Mod+Comma" = "scratchpad-toggle:background"
-"Mod+Alt+Comma" = "window-restore-from-scratchpad:background"
-"Mod+Alt+Ctrl+Comma" = "scratchpad-focus-next:background"
+"Mod+Shift+1" = "window-toggle-scratchpad background"
+"Mod+Comma" = "scratchpad-toggle background"
+"Mod+Alt+Comma" = "window-restore-from-scratchpad background"
+"Mod+Alt+Ctrl+Comma" = "scratchpad-focus-next background"
 
-"Mod+Shift+2" = "window-toggle-scratchpad:music"
-"Mod+Period" = "scratchpad-toggle:music"
-"Mod+Alt+Period" = "window-restore-from-scratchpad:music"
-"Mod+Alt+Ctrl+Period" = "scratchpad-focus-next:music"
+"Mod+Shift+2" = "window-toggle-scratchpad music"
+"Mod+Period" = "scratchpad-toggle music"
+"Mod+Alt+Period" = "window-restore-from-scratchpad music"
+"Mod+Alt+Ctrl+Period" = "scratchpad-focus-next music"
 
 
-"Mod+Shift+3" = "window-toggle-scratchpad:terminal"
-"Mod+Apostrophe" = "scratchpad-toggle:terminal"
-"Mod+Alt+Apostrophe" = "window-restore-from-scratchpad:terminal"
-"Mod+Alt+Ctrl+Apostrophe" = "scratchpad-focus-next:terminal"
+"Mod+Shift+3" = "window-toggle-scratchpad terminal"
+"Mod+Apostrophe" = "scratchpad-toggle terminal"
+"Mod+Alt+Apostrophe" = "window-restore-from-scratchpad terminal"
+"Mod+Alt+Ctrl+Apostrophe" = "scratchpad-focus-next terminal"
 
 # ─── Screenshots ───
-"Mod+Shift+S" = "spawn:noctalia msg screenshot-region"
-"Mod+Shift+Z" = "spawn:noctalia msg screenshot-fullscreen"
-"Mod+Shift+X" = "spawn:noctalia msg screenshot-window"
-"Print" = "spawn:noctalia msg screenshot-region"
+"Mod+Shift+S" = "spawn noctalia msg screenshot-region"
+"Mod+Shift+Z" = "spawn noctalia msg screenshot-fullscreen"
+"Mod+Shift+X" = "spawn noctalia msg screenshot-window"
+"Print" = "spawn noctalia msg screenshot-region"
 
 # ─── Emergency Escape Key ───
 "Mod+Escape" = "cheatsheet-toggle"
@@ -246,23 +246,24 @@
 # ─── Exit / Power ───
 "Ctrl+Alt+Q" = "session-quit"
 "Mod+O" = "overview-toggle"
-"Mod+Shift+Q" = "spawn:noctalia msg panel-toggle session"
+"Mod+Shift+Q" = "spawn noctalia msg panel-toggle session"
 
 # ─── Control Center, Wallpaper & Misc ───
 #"Mod+W" = "spawn:noctalia msg panel-toggle wallpaper"
-"Mod+W" = "spawn:/home/eternalself/.local/bin/undershell-wall"
-"Mod+Shift+W" = "spawn:noctalia msg panel-toggle noctalia/wallhaven:browser"
+"Mod+W" = "spawn /home/eternalself/.local/bin/undershell-wall"
+"Mod+Shift+W" = "spawn noctalia msg panel-toggle noctalia/wallhaven:browser"
 #"Mod+Ctrl+W" = "spawn:noctalia msg panel-toggle noctalia/wallpaper_depth:manager"
-"Mod+Ctrl+W" = "spawn:noctalia msg panel-toggle eternalself-2328/undershell:panel"
-"Mod+Ctrl+D" = "spawn:/home/eternalself/.local/bin/undershell msg edit"
-"Mod+A" = "spawn:noctalia msg settings-toggle"
-"Mod+Ctrl+Q" = "spawn:kitty --title fl_term -e btop"
-"Mod+Alt+V" = "spawn:noctalia msg panel-toggle clipboard"
+"Mod+Ctrl+W" = "spawn noctalia msg panel-toggle eternalself-2328/undershell:panel"
+"Mod+Ctrl+D" = "spawn /home/eternalself/.local/bin/undershell msg edit"
+"Mod+A" = "spawn noctalia msg settings-toggle"
+"Mod+Ctrl+Q" = "spawn kitty --title fl_term -e btop"
+"Mod+Alt+V" = "spawn noctalia msg panel-toggle clipboard"
 
 # ─── Scripts y Plugins ───
-"Shift+Alt+T" = "spawn:~/.local/bin/niri-ocr.sh"
-"Mod+Alt+S" = "spawn:noctalia msg panel-toggle nightwatch75/file-search:panel"
-"Mod+Ctrl+C" = "spawn:noctalia msg panel-toggle yuuto/calculator:panel"
-"Mod+Shift+A" = "spawn:noctalia msg plugin alexander/screen-toolkit:service all colorPicker"
+"Shift+Alt+T" = "spawn noctalia msg plugin fel/ocr:ocr all ocr-region"   # OCR de una region al portapapeles (antes niri-ocr.sh, que ya no existe)
+"Mod+Alt+S" = "spawn noctalia msg panel-toggle nilsonlinux/speedtest-meter:speedtest"   # Medidor de velocidad (necesita speedtest de Ookla o speedtest-cli en el PATH)
+"Mod+Alt+P" = "spawn noctalia msg panel-toggle prponkshe/umbriel-displays:panel"        # Pantallas: resolucion, refresco, escala y disposicion
+"Mod+Ctrl+C" = "spawn noctalia msg panel-toggle yuuto/calculator:panel"
+"Mod+Shift+A" = "spawn noctalia msg plugin alexander/screen-toolkit:service all colorPicker"
 #"Mod+Alt+C" = "spawn:noctalia msg panel-toggle jrohland/claudecode:popout"
-"Mod+Alt+C" = "spawn:noctalia msg panel-toggle lfdominguez/claude-sessions:panel"
+"Mod+Alt+C" = "spawn noctalia msg panel-toggle lfdominguez/claude-sessions:panel"
